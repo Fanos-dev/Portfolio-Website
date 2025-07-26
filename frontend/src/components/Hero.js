@@ -27,7 +27,7 @@ const Hero = () => {
           {/* Main Title */}
           <h1 className="display-lg mb-8 text-white">
             Mahomed Irfan 
-            <span className="block text-yellow-400">Akbur Ally</span>
+            <span className="block text-cyan-400 glow-icon">Akbur Ally</span>
           </h1>
 
           {/* Tagline */}
