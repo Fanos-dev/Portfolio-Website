@@ -249,7 +249,7 @@ const ProjectDetail = () => {
                     </div>
                     <div className="space-y-3">
                       {project.tech.map((tech, index) => (
-                        <div key={index} className="p-3 bg-gray-800/60 border border-gray-700 rounded-lg text-center backdrop-blur-sm hover:border-cyan-400/50 transition-colors">
+                        <div key={index} className="p-3 bg-gray-800/60 border border-gray-700 rounded-lg text-center backdrop-blur-sm hover:border-blue-300/50 transition-colors">
                           <span className="body-sm text-gray-300 font-medium">{tech}</span>
                         </div>
                       ))}
