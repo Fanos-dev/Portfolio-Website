@@ -90,8 +90,8 @@ const Contact = () => {
                   const IconComponent = contact.icon;
                   return (
                     <div key={index} className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-yellow-400/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <IconComponent size={20} className="text-yellow-400" />
+                      <div className="w-12 h-12 bg-blue-300/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <IconComponent size={20} className="text-blue-300" />
                       </div>
                       <div>
                         <p className="body-sm text-gray-500 uppercase tracking-wide">{contact.label}</p>
