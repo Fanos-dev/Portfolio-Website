@@ -43,7 +43,7 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="max-w-4xl mx-auto">
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
@@ -55,7 +55,7 @@ const Contact = () => {
               </div>
 
               {/* Contact Methods */}
-              <div className="space-y-4">
+              <div className="grid md:grid-cols-2 gap-6">
                 {contactInfo.map((contact, index) => {
                   const IconComponent = contact.icon;
                   return (
@@ -86,7 +86,7 @@ const Contact = () => {
               {/* Social Links */}
               <div className="pt-8 border-t border-gray-700">
                 <p className="body-sm text-gray-500 mb-4">Follow me on social media</p>
-                <div className="flex space-x-4">
+                <div className="flex space-x-4 justify-center">
                   <a
                     href="https://github.com/Fanos-dev"
                     target="_blank"
@@ -105,79 +105,6 @@ const Contact = () => {
                   </a>
                 </div>
               </div>
-            </div>
-
-            {/* Contact Form */}
-            <div className="feature-card">
-              <h3 className="h2 mb-6 text-white">Send me a message</h3>
-              
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block body-sm text-gray-400 mb-2">
-                    Full Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full p-4 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-blue-300 focus:outline-none transition-colors"
-                    placeholder="Your name"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block body-sm text-gray-400 mb-2">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full p-4 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-blue-300 focus:outline-none transition-colors"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block body-sm text-gray-400 mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={6}
-                    className="w-full p-4 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-blue-300 focus:outline-none transition-colors resize-vertical"
-                    placeholder="Tell me about your project or just say hello..."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <div className="w-5 h-5 border-2 border-gray-600 border-t-transparent rounded-full animate-spin"></div>
-                      Sending...
-                    </>
-                  ) : (
-                    <>
-                      <Send size={20} />
-                      Send Message
-                    </>
-                  )}
-                </button>
-              </form>
             </div>
           </div>
         </div>
