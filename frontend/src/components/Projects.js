@@ -1,42 +1,67 @@
 import React from 'react';
-import { ExternalLink, Github, GamepadIcon, Mountain, Gamepad2 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { ExternalLink, Github, GamepadIcon, Mountain, Gamepad2, ArrowRight } from 'lucide-react';
 
 const Projects = () => {
+  const navigate = useNavigate();
+
   const projects = [
     {
-      id: 1,
+      id: 'echoes-of-fate',
       title: 'EchoesOfFate',
       subtitle: 'Story-Driven Quiz Game',
       description: 'A narrative-driven quiz game developed with a team of 11 for a university module. Combines video, audio, and interactive UI using object-oriented principles.',
+      shortDescription: 'Interactive story-driven quiz game with multimedia elements',
       tech: ['C++', 'SFML', 'sfeMovie'],
       github: 'https://github.com/Fanos-dev/EchoesOfFate',
       icon: GamepadIcon,
-      featured: true
+      featured: true,
+      color: 'from-blue-600/20 to-purple-600/20'
     },
     {
-      id: 2,
+      id: 'terrain-generation',
       title: 'Terrain Generation Project',
       subtitle: 'Procedural Landscape System',
       description: 'Procedural terrain generation system built in Unity, focused on realistic landscapes using Perlin noise and other algorithms.',
+      shortDescription: 'Unity-based procedural terrain generation using advanced algorithms',
       tech: ['Unity', 'C#', 'Perlin Noise'],
       github: 'https://github.com/Fanos-dev/TerrainGeneration',
       icon: Mountain,
-      featured: true
+      featured: true,
+      color: 'from-green-600/20 to-teal-600/20'
     },
     {
-      id: 3,
+      id: 'game-jam-portfolio',
       title: 'Game Jam Portfolio',
       subtitle: 'Collection of Experimental Games',
       description: 'A collection of games built solo or with teams for various game jams. Includes platformers, puzzle games, and experimental titles.',
+      shortDescription: 'Diverse collection of games created during competitive game jams',
       tech: ['Unity', 'C#', 'Game Design'],
       link: 'https://fanosgames.itch.io',
       icon: Gamepad2,
-      featured: false
+      featured: false,
+      color: 'from-purple-600/20 to-pink-600/20'
+    },
+    {
+      id: 'web-applications',
+      title: 'Web Applications',
+      subtitle: 'Full-Stack Development',
+      description: 'Various web applications built using modern technologies including React, Node.js, and databases.',
+      shortDescription: 'Modern web applications with responsive design and user-friendly interfaces',
+      tech: ['React', 'Node.js', 'MongoDB'],
+      github: 'https://github.com/Fanos-dev',
+      icon: ExternalLink,
+      featured: false,
+      color: 'from-cyan-600/20 to-blue-600/20'
     }
   ];
 
+  const handleProjectClick = (projectId) => {
+    navigate(`/project/${projectId}`);
+  };
+
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="py-20 section-glow">
       <div className="container">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -49,87 +74,82 @@ const Projects = () => {
           </div>
 
           {/* Projects Grid */}
-          <div className="space-y-8">
-            {projects.map((project, index) => {
+          <div className="projects-grid">
+            {projects.map((project) => {
               const IconComponent = project.icon;
-              const isEven = index % 2 === 0;
               
               return (
                 <div 
                   key={project.id} 
-                  className={`grid lg:grid-cols-2 gap-12 items-center ${
-                    !isEven ? 'lg:grid-flow-col-dense' : ''
-                  }`}
+                  className="project-card group"
+                  onClick={() => handleProjectClick(project.id)}
                 >
-                  {/* Project Image/Icon */}
-                  <div className={`${!isEven ? 'lg:col-start-2' : ''}`}>
-                    <div className="relative group">
-                      <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center border border-gray-700 group-hover:border-yellow-400/50 transition-all duration-300">
-                        <div className="text-center">
-                          <div className="w-20 h-20 bg-yellow-400/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-yellow-400/30 transition-colors">
-                            <IconComponent size={40} className="text-yellow-400" />
-                          </div>
-                          <p className="text-gray-400 body-sm">Project Preview</p>
-                        </div>
-                      </div>
-                      {/* Decorative elements */}
-                      <div className="absolute -top-2 -right-2 w-6 h-6 bg-yellow-400/20 rounded-full group-hover:bg-yellow-400/40 transition-colors"></div>
-                      <div className="absolute -bottom-2 -left-2 w-8 h-8 bg-blue-400/10 rounded-full group-hover:bg-blue-400/20 transition-colors"></div>
+                  {/* Project Header */}
+                  <div className="flex items-center justify-between mb-6">
+                    <div className={`w-16 h-16 bg-gradient-to-br ${project.color} rounded-xl flex items-center justify-center glow-icon`}>
+                      <IconComponent size={32} className="text-cyan-400" />
+                    </div>
+                    <div className="flex items-center text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <span className="text-sm font-medium mr-2">View Details</span>
+                      <ArrowRight size={16} />
                     </div>
                   </div>
 
                   {/* Project Content */}
-                  <div className={`${!isEven ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
-                    <div className="space-y-6">
-                      {/* Project Header */}
-                      <div>
-                        <h3 className="h1 mb-2 text-white">{project.title}</h3>
-                        <p className="h3 text-yellow-400 mb-4">{project.subtitle}</p>
-                        <p className="body-md text-gray-400">{project.description}</p>
-                      </div>
+                  <div className="flex-1 flex flex-col">
+                    <div className="mb-4">
+                      <h3 className="h2 mb-2 text-white group-hover:text-cyan-400 transition-colors duration-300">
+                        {project.title}
+                      </h3>
+                      <p className="body-md text-cyan-400 mb-3 font-medium">
+                        {project.subtitle}
+                      </p>
+                      <p className="body-sm text-gray-400 line-clamp-3">
+                        {project.shortDescription}
+                      </p>
+                    </div>
 
-                      {/* Tech Stack */}
-                      <div>
-                        <h4 className="body-md font-semibold text-white mb-3">Technologies Used:</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {project.tech.map((tech, techIndex) => (
-                            <span 
-                              key={techIndex}
-                              className="px-3 py-1 bg-gray-800 border border-gray-700 rounded-lg text-sm text-gray-300 hover:border-yellow-400/50 transition-colors"
-                            >
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* Project Links */}
-                      <div className="flex space-x-4">
-                        {project.github && (
-                          <a
-                            href={project.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn-secondary"
+                    {/* Tech Stack */}
+                    <div className="mb-6 flex-1">
+                      <div className="flex flex-wrap gap-2">
+                        {project.tech.slice(0, 3).map((tech, techIndex) => (
+                          <span 
+                            key={techIndex}
+                            className="px-3 py-1 bg-gray-800/60 border border-gray-700 rounded-lg text-xs text-gray-300 hover:border-cyan-400/50 transition-colors backdrop-blur-sm"
                           >
-                            <Github size={20} />
-                            View Code
-                          </a>
-                        )}
-                        {project.link && (
-                          <a
-                            href={project.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn-primary"
-                          >
-                            <ExternalLink size={20} />
-                            Live Demo
-                          </a>
+                            {tech}
+                          </span>
+                        ))}
+                        {project.tech.length > 3 && (
+                          <span className="px-3 py-1 bg-cyan-400/10 border border-cyan-400/30 rounded-lg text-xs text-cyan-400">
+                            +{project.tech.length - 3} more
+                          </span>
                         )}
                       </div>
                     </div>
+
+                    {/* Project Links Preview */}
+                    <div className="flex items-center justify-between pt-4 border-t border-gray-700/50">
+                      <div className="flex space-x-3">
+                        {project.github && (
+                          <div className="w-8 h-8 bg-gray-800/60 rounded-lg flex items-center justify-center">
+                            <Github size={16} className="text-gray-400" />
+                          </div>
+                        )}
+                        {project.link && (
+                          <div className="w-8 h-8 bg-gray-800/60 rounded-lg flex items-center justify-center">
+                            <ExternalLink size={16} className="text-gray-400" />
+                          </div>
+                        )}
+                      </div>
+                      <div className="text-xs text-gray-500 uppercase tracking-wide">
+                        {project.featured ? 'Featured' : 'Project'}
+                      </div>
+                    </div>
                   </div>
+
+                  {/* Hover Glow Effect */}
+                  <div className="absolute inset-0 rounded-20 bg-gradient-to-r from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                 </div>
               );
             })}
@@ -137,18 +157,20 @@ const Projects = () => {
 
           {/* More Projects CTA */}
           <div className="text-center mt-16">
-            <p className="body-lg text-gray-400 mb-6">
-              Interested in seeing more of my work?
-            </p>
-            <a 
-              href="https://github.com/Fanos-dev" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="btn-primary"
-            >
-              <Github size={20} />
-              Visit My GitHub
-            </a>
+            <div className="inline-block p-8 rounded-2xl bg-gradient-to-r from-gray-800/40 to-gray-900/40 border border-gray-700/50 backdrop-blur-sm">
+              <p className="body-lg text-gray-300 mb-6">
+                Interested in seeing more of my work and contributions?
+              </p>
+              <a 
+                href="https://github.com/Fanos-dev" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                <Github size={20} />
+                Explore My GitHub
+              </a>
+            </div>
           </div>
         </div>
       </div>

@@ -21,6 +21,16 @@ const Header = () => {
     { name: 'Contact', href: '#contact' }
   ];
 
+  const scrollToSection = (href) => {
+    if (href.startsWith('#')) {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -30,27 +40,30 @@ const Header = () => {
       <div className="container">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
-          <a href="#home" className="text-xl font-bold text-white hover:text-yellow-400 transition-colors">
+          <a 
+            href="/" 
+            className="text-xl font-bold text-white hover:text-cyan-400 transition-colors glow-icon"
+          >
             Irfan Ally
           </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.name}
-                href={item.href}
-                className="text-gray-300 hover:text-white transition-colors relative group"
+                onClick={() => scrollToSection(item.href)}
+                className="text-gray-300 hover:text-cyan-400 transition-colors relative group cursor-pointer bg-transparent border-none"
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
-              </a>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full glow-icon"></span>
+              </button>
             ))}
           </nav>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white p-2"
+            className="md:hidden text-white p-2 hover:text-cyan-400 transition-colors glow-icon"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -62,14 +75,13 @@ const Header = () => {
           <nav className="md:hidden pb-4 border-t border-white/10 mt-4">
             <div className="flex flex-col space-y-3 pt-4">
               {navItems.map((item) => (
-                <a
+                <button
                   key={item.name}
-                  href={item.href}
-                  className="text-gray-300 hover:text-white transition-colors py-2"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => scrollToSection(item.href)}
+                  className="text-gray-300 hover:text-cyan-400 transition-colors py-2 text-left bg-transparent border-none cursor-pointer"
                 >
                   {item.name}
-                </a>
+                </button>
               ))}
             </div>
           </nav>
