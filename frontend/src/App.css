@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
 
 :root {
-  /* Ocean-Inspired Color Palette */
+  /* Ocean-Inspired Color Palette with Black Background */
   --oxford-blue: #001b2e;
   --charcoal: #294c60;
   --moonstone: #53a2be;
   --tea-green: #d7e8ba;
   --seasalt: #fcfaf9;
   
-  /* Background System */
-  --bg-primary: var(--oxford-blue);
+  /* Background System - Pure Black Base */
+  --bg-primary: #000000;
   --bg-secondary: var(--charcoal);
   --bg-tertiary: #3a5a75;
-  --bg-gradient: linear-gradient(180deg, var(--oxford-blue) 0%, var(--charcoal) 100%);
+  --bg-gradient: linear-gradient(180deg, #000000 0%, #111111 100%);
   
   /* Text Hierarchy */
   --text-primary: var(--seasalt);
