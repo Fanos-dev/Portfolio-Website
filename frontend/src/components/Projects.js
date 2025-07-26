@@ -87,7 +87,7 @@ const Projects = () => {
                   {/* Project Header */}
                   <div className="flex items-center justify-between mb-6">
                     <div className={`w-16 h-16 bg-gradient-to-br ${project.color} rounded-xl flex items-center justify-center glow-icon`}>
-                      <IconComponent size={32} className="text-cyan-400" />
+                      <IconComponent size={32} className="text-blue-300" />
                     </div>
                     <div className="flex items-center text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <span className="text-sm font-medium mr-2">View Details</span>
