@@ -42,7 +42,7 @@ const Header = () => {
           {/* Logo */}
           <a 
             href="/" 
-            className="text-xl font-bold text-white hover:text-cyan-400 transition-colors glow-icon"
+            className="text-xl font-bold text-white hover:text-blue-300 transition-colors glow-icon"
           >
             Irfan Ally
           </a>
