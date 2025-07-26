@@ -177,9 +177,9 @@ body {
   box-shadow: 0 5px 15px rgba(0, 240, 255, 0.2);
 }
 
-/* Card Styles with Glow Effects */
+/* Card Styles with Ocean Theme */
 .feature-card {
-  background: rgba(26, 26, 46, 0.8);
+  background: rgba(41, 76, 96, 0.8);
   border: 1px solid var(--border-subtle);
   border-radius: 16px;
   padding: 32px;
@@ -192,7 +192,7 @@ body {
 .feature-card:hover {
   transform: translateY(-8px);
   border-color: var(--accent-primary);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 30px var(--accent-glow);
+  box-shadow: 0 25px 50px rgba(0, 27, 46, 0.6), 0 0 30px var(--accent-glow);
 }
 
 .feature-card::before {
@@ -211,9 +211,9 @@ body {
   opacity: 1;
 }
 
-/* Project Card Specific Styles */
+/* Project Card Ocean Theme */
 .project-card {
-  background: rgba(26, 26, 46, 0.9);
+  background: rgba(41, 76, 96, 0.9);
   border: 1px solid var(--border-subtle);
   border-radius: 20px;
   padding: 24px;
@@ -230,7 +230,7 @@ body {
 .project-card:hover {
   transform: translateY(-10px);
   border-color: var(--accent-primary);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 40px var(--accent-glow);
+  box-shadow: 0 30px 60px rgba(0, 27, 46, 0.7), 0 0 40px var(--accent-glow);
 }
 
 .project-card::after {
@@ -240,7 +240,7 @@ body {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: conic-gradient(from 0deg, transparent, var(--accent-primary), transparent, var(--accent-primary), transparent);
+  background: conic-gradient(from 0deg, transparent, var(--accent-primary), transparent, var(--tea-green), transparent);
   opacity: 0;
   transition: opacity 0.4s ease;
   animation: rotate 4s linear infinite;
