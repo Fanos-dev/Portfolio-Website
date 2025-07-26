@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ExternalLink, Github, GamepadIcon, Mountain, Gamepad2, ArrowRight } from 'lucide-react';
+import { ExternalLink, Github, GamepadIcon, Mountain, Gamepad2, ArrowRight, Zap, Database } from 'lucide-react';
 
 const Projects = () => {
   const navigate = useNavigate();
@@ -9,50 +9,52 @@ const Projects = () => {
     {
       id: 'echoes-of-fate',
       title: 'EchoesOfFate',
-      subtitle: 'Story-Driven Quiz Game',
-      description: 'A narrative-driven quiz game developed with a team of 11 for a university module. Combines video, audio, and interactive UI using object-oriented principles.',
-      shortDescription: 'Interactive story-driven quiz game with multimedia elements',
+      summary: 'A narrative-based quiz game built in C++ using SFML and sfeMovie. Integrates video, sound, and object-oriented design.',
       tech: ['C++', 'SFML', 'sfeMovie'],
       github: 'https://github.com/Fanos-dev/EchoesOfFate',
       icon: GamepadIcon,
-      featured: true,
-      color: 'from-blue-500/20 to-moonstone/20'
+      category: 'Game Development',
+      color: 'from-purple-500/20 to-blue-500/20'
     },
     {
       id: 'terrain-generation',
-      title: 'Terrain Generation Project',
-      subtitle: 'Procedural Landscape System',
-      description: 'Procedural terrain generation system built in Unity, focused on realistic landscapes using Perlin noise and other algorithms.',
-      shortDescription: 'Unity-based procedural terrain generation using advanced algorithms',
+      title: 'Terrain Generation',
+      summary: 'Procedural terrain generation tool built in Unity using Perlin noise to simulate realistic landscapes.',
       tech: ['Unity', 'C#', 'Perlin Noise'],
       github: 'https://github.com/Fanos-dev/TerrainGeneration',
       icon: Mountain,
-      featured: true,
-      color: 'from-teal-500/20 to-green-500/20'
+      category: 'Game Development',
+      color: 'from-green-500/20 to-teal-500/20'
     },
     {
-      id: 'game-jam-portfolio',
-      title: 'Game Jam Portfolio',
-      subtitle: 'Collection of Experimental Games',
-      description: 'A collection of games built solo or with teams for various game jams. Includes platformers, puzzle games, and experimental titles.',
-      shortDescription: 'Diverse collection of games created during competitive game jams',
-      tech: ['Unity', 'C#', 'Game Design'],
-      link: 'https://fanosgames.itch.io',
+      id: 'lava',
+      title: 'Lava',
+      summary: 'A fast-paced 2D survival platformer made for a game jam. Players must escape rising lava while navigating obstacles.',
+      tech: ['Unity', 'C#', 'Game Jam'],
+      link: 'https://fanosgames.itch.io/lava',
+      icon: Zap,
+      category: 'Game Jam',
+      color: 'from-red-500/20 to-orange-500/20'
+    },
+    {
+      id: 'the-beyond',
+      title: 'The Beyond',
+      summary: 'Atmospheric exploration game created for a game jam. Explore an alien world with minimalist visuals and immersive sound.',
+      tech: ['Unity', 'C#', 'Audio Design'],
+      link: 'https://fanosgames.itch.io/the-beyond',
       icon: Gamepad2,
-      featured: false,
-      color: 'from-green-400/20 to-lime-400/20'
+      category: 'Game Jam',
+      color: 'from-indigo-500/20 to-purple-500/20'
     },
     {
-      id: 'web-applications',
-      title: 'Web Applications',
-      subtitle: 'Full-Stack Development',
-      description: 'Various web applications built using modern technologies including React, Node.js, and databases.',
-      shortDescription: 'Modern web applications with responsive design and user-friendly interfaces',
-      tech: ['React', 'Node.js', 'MongoDB'],
+      id: 'pos-inventory-system',
+      title: 'POS & Inventory Management System',
+      summary: 'Desktop app for a restaurant, developed in C# and SQL Server. Automates order processing, inventory tracking, and report generation.',
+      tech: ['C#', 'SQL Server', 'WinForms', 'Crystal Reports'],
       github: 'https://github.com/Fanos-dev',
-      icon: ExternalLink,
-      featured: false,
-      color: 'from-blue-400/20 to-cyan-400/20'
+      icon: Database,
+      category: 'Desktop Application',
+      color: 'from-blue-500/20 to-cyan-500/20'
     }
   ];
 
@@ -68,12 +70,12 @@ const Projects = () => {
           <div className="text-center mb-16">
             <h2 className="display-md mb-6 text-white">Featured Projects</h2>
             <p className="body-lg max-w-2xl mx-auto text-gray-400">
-              A showcase of my work in game development, systems programming, 
+              A showcase of my work spanning game development, desktop applications, 
               and creative problem-solving through code.
             </p>
           </div>
 
-          {/* Projects Grid */}
+          {/* Projects Grid - Left to Right, Top to Bottom */}
           <div className="projects-grid">
             {projects.map((project) => {
               const IconComponent = project.icon;
@@ -84,33 +86,44 @@ const Projects = () => {
                   className="project-card group"
                   onClick={() => handleProjectClick(project.id)}
                 >
-                  {/* Project Header */}
-                  <div className="flex items-center justify-between mb-6">
-                    <div className={`w-16 h-16 bg-gradient-to-br ${project.color} rounded-xl flex items-center justify-center glow-icon`}>
-                      <IconComponent size={32} className="text-blue-300" />
+                  {/* Image Placeholder */}
+                  <div className="relative mb-6 aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden">
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="text-center">
+                        <div className={`w-16 h-16 bg-gradient-to-br ${project.color} rounded-xl flex items-center justify-center mx-auto mb-3 glow-icon`}>
+                          <IconComponent size={32} className="text-blue-300" />
+                        </div>
+                        <p className="text-xs text-gray-500 uppercase tracking-wide">Project Screenshot</p>
+                      </div>
                     </div>
-                    <div className="flex items-center text-blue-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <span className="text-sm font-medium mr-2">View Details</span>
-                      <ArrowRight size={16} />
+                    {/* Hover overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <ArrowRight size={20} className="text-blue-300" />
                     </div>
                   </div>
 
                   {/* Project Content */}
                   <div className="flex-1 flex flex-col">
-                    <div className="mb-4">
-                      <h3 className="h2 mb-2 text-white group-hover:text-blue-300 transition-colors duration-300">
+                    {/* Category Badge */}
+                    <div className="mb-3">
+                      <span className="inline-block px-3 py-1 bg-blue-300/10 border border-blue-300/20 rounded-full text-xs text-blue-300 font-medium">
+                        {project.category}
+                      </span>
+                    </div>
+
+                    {/* Title and Summary */}
+                    <div className="mb-4 flex-1">
+                      <h3 className="h2 mb-3 text-white group-hover:text-blue-300 transition-colors duration-300">
                         {project.title}
                       </h3>
-                      <p className="body-md text-blue-300 mb-3 font-medium">
-                        {project.subtitle}
-                      </p>
-                      <p className="body-sm text-gray-400 line-clamp-3">
-                        {project.shortDescription}
+                      <p className="body-sm text-gray-400 leading-relaxed">
+                        {project.summary}
                       </p>
                     </div>
 
                     {/* Tech Stack */}
-                    <div className="mb-6 flex-1">
+                    <div className="mb-6">
                       <div className="flex flex-wrap gap-2">
                         {project.tech.slice(0, 3).map((tech, techIndex) => (
                           <span 
@@ -142,8 +155,8 @@ const Projects = () => {
                           </div>
                         )}
                       </div>
-                      <div className="text-xs text-gray-500 uppercase tracking-wide">
-                        {project.featured ? 'Featured' : 'Project'}
+                      <div className="text-xs text-blue-300 group-hover:text-blue-200 transition-colors">
+                        View Details →
                       </div>
                     </div>
                   </div>
@@ -157,19 +170,30 @@ const Projects = () => {
 
           {/* More Projects CTA */}
           <div className="text-center mt-16">
-            <div className="inline-block p-8 rounded-2xl bg-gradient-to-r from-gray-800/40 to-gray-900/40 border border-gray-700/50 backdrop-blur-sm">
+            <div className="inline-block p-8 rounded-2xl bg-gradient-to-r from-gray-900/40 to-gray-800/40 border border-gray-700/50 backdrop-blur-sm">
               <p className="body-lg text-gray-300 mb-6">
                 Interested in seeing more of my work and contributions?
               </p>
-              <a 
-                href="https://github.com/Fanos-dev" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="btn-primary"
-              >
-                <Github size={20} />
-                Explore My GitHub
-              </a>
+              <div className="flex justify-center space-x-4">
+                <a 
+                  href="https://github.com/Fanos-dev" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                >
+                  <Github size={20} />
+                  GitHub Profile
+                </a>
+                <a 
+                  href="https://fanosgames.itch.io" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="btn-secondary"
+                >
+                  <ExternalLink size={20} />
+                  itch.io Games
+                </a>
+              </div>
             </div>
           </div>
         </div>
