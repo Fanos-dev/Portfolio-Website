@@ -23,11 +23,11 @@ const Contact = () => {
       href: 'https://github.com/Fanos-dev'
     },
     {
-      icon: SiItchdotio,
-      label: 'Itch.io',
-      value: 'fanos-games',
-      href: 'https://fanos.itch.io/'
-}
+      icon: MapPin,
+      label: 'Location',
+      value: 'Phoenix, Durban',
+      href: null
+    }
   ];
 
   return (
