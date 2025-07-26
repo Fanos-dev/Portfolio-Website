@@ -82,8 +82,8 @@ const About = () => {
               const IconComponent = highlight.icon;
               return (
                 <div key={index} className="feature-card text-center">
-                  <div className="w-16 h-16 bg-yellow-400/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <IconComponent size={32} className="text-yellow-400" />
+                  <div className="w-16 h-16 bg-blue-300/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <IconComponent size={32} className="text-blue-300" />
                   </div>
                   <h4 className="h3 mb-4 text-white">{highlight.title}</h4>
                   <p className="body-md text-gray-400">{highlight.description}</p>
