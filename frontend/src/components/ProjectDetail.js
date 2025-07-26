@@ -244,7 +244,7 @@ const ProjectDetail = () => {
                   {/* Technologies */}
                   <div className="feature-card">
                     <div className="flex items-center mb-6">
-                      <Code size={24} className="text-cyan-400 mr-3 glow-icon" />
+                      <Code size={24} className="text-blue-300 mr-3 glow-icon" />
                       <h3 className="h3 text-white">Technologies</h3>
                     </div>
                     <div className="space-y-3">
