@@ -53,7 +53,7 @@ const Header = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-gray-300 hover:text-cyan-400 transition-colors relative group cursor-pointer bg-transparent border-none"
+                className="text-gray-300 hover:text-blue-300 transition-colors relative group cursor-pointer bg-transparent border-none"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full glow-icon"></span>
