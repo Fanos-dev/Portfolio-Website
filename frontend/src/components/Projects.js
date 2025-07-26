@@ -115,7 +115,7 @@ const Projects = () => {
                         {project.tech.slice(0, 3).map((tech, techIndex) => (
                           <span 
                             key={techIndex}
-                            className="px-3 py-1 bg-gray-800/60 border border-gray-700 rounded-lg text-xs text-gray-300 hover:border-cyan-400/50 transition-colors backdrop-blur-sm"
+                            className="px-3 py-1 bg-gray-800/60 border border-gray-700 rounded-lg text-xs text-gray-300 hover:border-blue-300/50 transition-colors backdrop-blur-sm"
                           >
                             {tech}
                           </span>
