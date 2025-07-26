@@ -129,7 +129,7 @@ const Contact = () => {
                     href="https://linkedin.com/in/irfan-akbur-ally"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-yellow-400 hover:bg-gray-700 transition-all duration-300"
+                    className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-blue-300 hover:bg-gray-700 transition-all duration-300"
                   >
                     <Linkedin size={20} />
                   </a>
