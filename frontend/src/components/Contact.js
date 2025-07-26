@@ -31,7 +31,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-40">
+    <section id="contact" className="py-20">
       <div className="container">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
