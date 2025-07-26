@@ -50,7 +50,7 @@ const Footer = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="block body-md text-gray-400 hover:text-yellow-400 transition-colors"
+                  className="block body-md text-gray-400 hover:text-blue-300 transition-colors"
                 >
                   {link.name}
                 </a>
