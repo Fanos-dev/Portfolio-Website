@@ -73,7 +73,7 @@ const Hero = () => {
 
           {/* Scroll Indicator */}
           <div className="animate-bounce">
-            <a href="#about" className="text-gray-500 hover:text-yellow-400 transition-colors">
+            <a href="#about" className="text-gray-500 hover:text-cyan-400 transition-colors glow-icon">
               <ArrowDown size={24} />
             </a>
           </div>
