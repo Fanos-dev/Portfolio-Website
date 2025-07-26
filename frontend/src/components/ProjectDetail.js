@@ -185,7 +185,7 @@ const ProjectDetail = () => {
                   <p className="body-md text-gray-400">{project.teamSize}</p>
                 </div>
                 <div className="feature-card text-center">
-                  <Target size={32} className="text-cyan-400 mx-auto mb-4 glow-icon" />
+                  <Target size={32} className="text-blue-300 mx-auto mb-4 glow-icon" />
                   <h3 className="h3 text-white mb-2">Role</h3>
                   <p className="body-md text-gray-400">{project.role}</p>
                 </div>
