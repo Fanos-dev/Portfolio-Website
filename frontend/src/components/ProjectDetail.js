@@ -180,7 +180,7 @@ const ProjectDetail = () => {
                   <p className="body-md text-gray-400">{project.duration}</p>
                 </div>
                 <div className="feature-card text-center">
-                  <Users size={32} className="text-cyan-400 mx-auto mb-4 glow-icon" />
+                  <Users size={32} className="text-blue-300 mx-auto mb-4 glow-icon" />
                   <h3 className="h3 text-white mb-2">Team Size</h3>
                   <p className="body-md text-gray-400">{project.teamSize}</p>
                 </div>
