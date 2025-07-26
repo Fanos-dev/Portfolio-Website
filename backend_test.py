@@ -151,39 +151,54 @@ def test_mongodb_connection():
     return True
 
 def test_no_contact_endpoints():
-    """Verify that no contact form endpoints exist"""
-    print("\n📋 Testing for Contact Form Endpoints (should not exist)...")
+    """Verify that no backend contact form endpoints exist"""
+    print("\n📋 Testing for Backend Contact Form Endpoints (should not exist)...")
     
-    contact_endpoints = [
-        "/contact",
+    # Only test backend API endpoints, not frontend routes
+    backend_contact_endpoints = [
         "/api/contact", 
-        "/send-message",
         "/api/send-message",
-        "/message",
-        "/api/message"
+        "/api/message",
+        "/api/contact-form",
+        "/api/submit-contact"
     ]
     
     all_good = True
-    for endpoint in contact_endpoints:
+    for endpoint in backend_contact_endpoints:
         try:
-            full_url = f"{BACKEND_URL}{endpoint}" if not endpoint.startswith("/api") else f"{API_BASE_URL.replace('/api', '')}{endpoint}"
+            full_url = f"{BACKEND_URL}{endpoint}"
             response = requests.get(full_url, timeout=5)
             
             if response.status_code != 404:
-                print(f"⚠️  Found unexpected endpoint: {endpoint} (Status: {response.status_code})")
+                print(f"⚠️  Found unexpected backend endpoint: {endpoint} (Status: {response.status_code})")
                 all_good = False
             else:
-                print(f"✅ Confirmed {endpoint} does not exist (404)")
+                print(f"✅ Confirmed backend endpoint {endpoint} does not exist (404)")
                 
         except requests.exceptions.RequestException:
             # This is expected - endpoints should not exist
-            print(f"✅ Confirmed {endpoint} does not exist (connection error)")
+            print(f"✅ Confirmed backend endpoint {endpoint} does not exist (connection error)")
+    
+    # Also test POST requests to ensure no contact submission endpoints
+    for endpoint in ["/api/contact", "/api/send-message"]:
+        try:
+            full_url = f"{BACKEND_URL}{endpoint}"
+            response = requests.post(full_url, json={"test": "data"}, timeout=5)
+            
+            if response.status_code not in [404, 405]:  # 404 = not found, 405 = method not allowed
+                print(f"⚠️  Found unexpected POST endpoint: {endpoint} (Status: {response.status_code})")
+                all_good = False
+            else:
+                print(f"✅ Confirmed POST {endpoint} does not exist ({response.status_code})")
+                
+        except requests.exceptions.RequestException:
+            print(f"✅ Confirmed POST {endpoint} does not exist (connection error)")
     
     if all_good:
-        print("✅ No contact form endpoints found (as expected)")
+        print("✅ No backend contact form endpoints found (as expected)")
         return True
     else:
-        print("❌ Found unexpected contact form endpoints")
+        print("❌ Found unexpected backend contact form endpoints")
         return False
 
 def run_all_tests():
