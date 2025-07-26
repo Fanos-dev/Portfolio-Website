@@ -64,8 +64,8 @@ const About = () => {
             <div className="relative">
               <div className="aspect-square bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center border border-gray-700">
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-yellow-400/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <GraduationCap size={32} className="text-yellow-400" />
+                  <div className="w-16 h-16 bg-blue-300/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <GraduationCap size={32} className="text-blue-300" />
                   </div>
                   <p className="text-gray-400 body-sm">Professional Photo</p>
                 </div>
