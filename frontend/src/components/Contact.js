@@ -1,5 +1,6 @@
 import React from 'react';
-import { Mail, Linkedin, Github, MapPin } from 'lucide-react';
+import { Mail, Linkedin, Github, Gamepad2 } from 'lucide-react';
+import { SiItchdotio } from 'react-icons/si';
 
 const Contact = () => {
 
@@ -23,15 +24,15 @@ const Contact = () => {
       href: 'https://github.com/Fanos-dev'
     },
     {
-      icon: MapPin,
-      label: 'Location',
-      value: 'Phoenix, Durban',
-      href: null
-    }
+      icon: SiItchdotio,
+      label: 'Itch.io',
+      value: 'fanos-games',
+      href: 'https://fanos.itch.io/'
+}
   ];
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="py-40">
       <div className="container">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -81,29 +82,6 @@ const Contact = () => {
                     </div>
                   );
                 })}
-              </div>
-
-              {/* Social Links */}
-              <div className="pt-8 border-t border-gray-700">
-                <p className="body-sm text-gray-500 mb-4">Follow me on social media</p>
-                <div className="flex space-x-4 justify-center">
-                  <a
-                    href="https://github.com/Fanos-dev"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-blue-300 hover:bg-gray-700 transition-all duration-300"
-                  >
-                    <Github size={20} />
-                  </a>
-                  <a
-                    href="https://linkedin.com/in/irfan-akbur-ally"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-blue-300 hover:bg-gray-700 transition-all duration-300"
-                  >
-                    <Linkedin size={20} />
-                  </a>
-                </div>
               </div>
             </div>
           </div>

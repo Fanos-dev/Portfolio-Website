@@ -32,10 +32,10 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 border-t border-gray-800">
       <div className="container py-12">
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-2">
           {/* Brand Section */}
           <div className="space-y-4">
-            <h3 className="h2 text-white">Irfan Ally</h3>
+            <h3 className="h2 text-white">Irfan Akbur Ally</h3>
             <p className="body-md text-gray-400 max-w-xs">
               Aspiring Software Developer passionate about creating innovative 
               solutions and engaging digital experiences.

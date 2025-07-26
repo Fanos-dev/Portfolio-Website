@@ -44,7 +44,7 @@ const Header = () => {
             href="/" 
             className="text-xl font-bold text-white hover:text-blue-300 transition-colors glow-icon"
           >
-            Irfan Ally
+            Irfan Akbur Ally
           </a>
 
           {/* Desktop Navigation */}
