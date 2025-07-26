@@ -149,7 +149,7 @@ const Projects = () => {
                   </div>
 
                   {/* Hover Glow Effect */}
-                  <div className="absolute inset-0 rounded-20 bg-gradient-to-r from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                  <div className="absolute inset-0 rounded-20 bg-gradient-to-r from-blue-300/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                 </div>
               );
             })}
