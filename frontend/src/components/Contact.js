@@ -1,6 +1,5 @@
 import React from 'react';
-import { Mail, Linkedin, Github, Gamepad2 } from 'lucide-react';
-import { SiItchdotio } from 'react-icons/si';
+import { Mail, Linkedin, Github, MapPin } from 'lucide-react';
 
 const Contact = () => {
 
