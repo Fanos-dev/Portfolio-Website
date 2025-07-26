@@ -218,7 +218,7 @@ const ProjectDetail = () => {
                     <div className="grid gap-3">
                       {project.features.map((feature, index) => (
                         <div key={index} className="flex items-start space-x-3">
-                          <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0 glow-icon"></div>
+                          <div className="w-2 h-2 bg-blue-300 rounded-full mt-2 flex-shrink-0 glow-icon"></div>
                           <p className="body-md text-gray-400">{feature}</p>
                         </div>
                       ))}
