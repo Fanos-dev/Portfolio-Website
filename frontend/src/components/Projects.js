@@ -28,7 +28,7 @@ const Projects = () => {
       github: 'https://github.com/Fanos-dev/TerrainGeneration',
       icon: Mountain,
       featured: true,
-      color: 'from-green-600/20 to-teal-600/20'
+      color: 'from-teal-500/20 to-green-500/20'
     },
     {
       id: 'game-jam-portfolio',
