@@ -1,5 +1,6 @@
 import React from 'react';
 import { Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { SiItchdotio } from 'react-icons/si';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -19,6 +20,11 @@ const Footer = () => {
       name: 'Email',
       url: 'mailto:akburallyirfan12@gmail.com',
       icon: Mail
+    },
+    {
+      name: 'Itch.io',
+      url: 'https://fanosgames.itch.io/',
+      icon: SiItchdotio,
     }
   ];
 
@@ -31,7 +37,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-900 border-t border-gray-800">
-      <div className="container py-12">
+      <div className="container py-16">
         <div className="grid md:grid-cols-3 gap-2">
           {/* Brand Section */}
           <div className="space-y-4">

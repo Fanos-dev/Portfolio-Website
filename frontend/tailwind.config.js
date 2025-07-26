@@ -70,11 +70,19 @@ module.exports = {
   				to: {
   					height: '0'
   				}
-  			}
+  			},
+			floatLight: {
+				'0%': { transform: 'translate(0px, 0px)' },
+				'25%': { transform: 'translate(100px, -50px)' },
+				'50%': { transform: 'translate(200px, 100px)' },
+				'75%': { transform: 'translate(-100px, 50px)' },
+				'100%': { transform: 'translate(0px, 0px)' }
+        },
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out'
+  			'accordion-up': 'accordion-up 0.2s ease-out',
+			'floating-light': 'floatLight 10s ease-in-out infinite'
   		}
   	}
   },

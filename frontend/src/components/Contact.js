@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail, Linkedin, Github, MapPin } from 'lucide-react';
+import { SiItchdotio } from 'react-icons/si';
 
 const Contact = () => {
 
@@ -13,25 +14,25 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      value: 'irfan-akbur-ally',
+      value: 'Irfan Akbur Ally',
       href: 'https://linkedin.com/in/irfan-akbur-ally'
     },
     {
       icon: Github,
       label: 'GitHub',
-      value: 'Fanos-dev',
+      value: 'Fanos Dev',
       href: 'https://github.com/Fanos-dev'
     },
     {
-      icon: MapPin,
-      label: 'Location',
-      value: 'Phoenix, Durban',
-      href: null
+      icon: SiItchdotio,
+      label: 'Itch.io',
+      value: 'Fanos Games',
+      href: 'https://fanosgames.itch.io/'
     }
   ];
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="py-40">
       <div className="container">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}

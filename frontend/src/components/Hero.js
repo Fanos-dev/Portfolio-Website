@@ -1,5 +1,7 @@
 import React from 'react';
 import { Github, Linkedin, Mail, ArrowDown } from 'lucide-react';
+import { SiItchdotio } from 'react-icons/si';
+import Typewriter from 'typewriter-effect';
 
 const Hero = () => {
   const socialLinks = [
@@ -17,12 +19,23 @@ const Hero = () => {
       name: 'Email',
       url: 'mailto:akburallyirfan12@gmail.com',
       icon: Mail
+    },
+    {
+      name: 'Itch.io',
+      url: 'https://fanosgames.itch.io/',
+      icon: SiItchdotio,
     }
   ];
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center py-20">
-      <div className="container text-center">
+    <section id="home" className="min-h-screen flex items-center justify-center py-20 relative overflow-hidden">
+
+      {/* Animated Light Background */}
+      <div className="absolute inset-0 z-0">
+        <div className="w-96 h-96 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 opacity-30 rounded-full blur-3xl animate-floating-light"></div>
+      </div>
+      
+      <div className="container text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Main Title */}
           <h1 className="display-lg mb-8 text-white">
@@ -32,7 +45,20 @@ const Hero = () => {
 
           {/* Tagline */}
           <p className="h2 mb-8 text-gray-300">
-            Aspiring Software Developer | Computer Science Student at UKZN
+            <Typewriter
+              options={{
+                strings: [
+                  'Aspiring Software Developer',
+                  'Computer Science Student at UKZN',
+                  'Game & Software Builder',
+                  'Passionate about Clean Code',
+                ],
+                autoStart: true,
+                loop: true,
+                delay: 60,
+                deleteSpeed: 40,
+              }}
+            />
           </p>
 
           {/* Bio */}
