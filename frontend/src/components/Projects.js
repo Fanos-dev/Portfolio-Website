@@ -101,7 +101,7 @@ const Projects = () => {
                       <h3 className="h2 mb-2 text-white group-hover:text-blue-300 transition-colors duration-300">
                         {project.title}
                       </h3>
-                      <p className="body-md text-cyan-400 mb-3 font-medium">
+                      <p className="body-md text-blue-300 mb-3 font-medium">
                         {project.subtitle}
                       </p>
                       <p className="body-sm text-gray-400 line-clamp-3">
