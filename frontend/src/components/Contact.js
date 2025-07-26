@@ -153,7 +153,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full p-4 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-yellow-400 focus:outline-none transition-colors"
+                    className="w-full p-4 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-blue-300 focus:outline-none transition-colors"
                     placeholder="Your name"
                   />
                 </div>
