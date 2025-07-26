@@ -185,7 +185,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full p-4 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-yellow-400 focus:outline-none transition-colors resize-vertical"
+                    className="w-full p-4 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-blue-300 focus:outline-none transition-colors resize-vertical"
                     placeholder="Tell me about your project or just say hello..."
                   />
                 </div>
