@@ -121,7 +121,7 @@ const Projects = () => {
                           </span>
                         ))}
                         {project.tech.length > 3 && (
-                          <span className="px-3 py-1 bg-cyan-400/10 border border-cyan-400/30 rounded-lg text-xs text-cyan-400">
+                          <span className="px-3 py-1 bg-blue-300/10 border border-blue-300/30 rounded-lg text-xs text-blue-300">
                             +{project.tech.length - 3} more
                           </span>
                         )}
