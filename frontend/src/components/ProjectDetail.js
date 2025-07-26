@@ -11,15 +11,15 @@ const ProjectDetail = () => {
   const projects = {
     'echoes-of-fate': {
       title: 'EchoesOfFate',
-      subtitle: 'Story-Driven Quiz Game',
-      description: 'A narrative-driven quiz game developed with a team of 11 for a university module. This project showcases advanced object-oriented programming principles, multimedia integration, and collaborative development practices.',
+      subtitle: 'Narrative-Based Quiz Game',
+      description: 'A narrative-based quiz game built in C++ using SFML and sfeMovie. Integrates video, sound, and object-oriented design for an immersive storytelling experience.',
       fullDescription: [
-        'EchoesOfFate represents a culmination of collaborative software development and creative storytelling. Built as part of a university module, this project brought together 11 developers to create an immersive narrative experience.',
-        'The game combines traditional quiz mechanics with rich storytelling elements, featuring integrated video sequences, atmospheric audio design, and an intuitive user interface. The entire system was architected using object-oriented principles, ensuring maintainable and scalable code.',
+        'EchoesOfFate represents a culmination of collaborative software development and creative storytelling. This project showcases advanced object-oriented programming principles, multimedia integration, and sophisticated game architecture.',
+        'The game combines traditional quiz mechanics with rich narrative elements, featuring integrated video sequences, atmospheric audio design, and an intuitive user interface. The entire system was architected using object-oriented principles, ensuring maintainable and scalable code.',
         'Key technical achievements include seamless multimedia integration using SFML and sfeMovie libraries, dynamic content loading, and a robust event-driven architecture that handles complex narrative branching.',
-        'This project taught valuable lessons in team coordination, version control with large teams, and the challenges of integrating multimedia content in C++ applications.'
+        'This project demonstrates proficiency in C++ development, multimedia programming, and collaborative software engineering practices.'
       ],
-      tech: ['C++', 'SFML', 'sfeMovie', 'Object-Oriented Design', 'Team Collaboration'],
+      tech: ['C++', 'SFML', 'sfeMovie', 'Object-Oriented Design', 'Multimedia Integration'],
       github: 'https://github.com/Fanos-dev/EchoesOfFate',
       features: [
         'Interactive narrative with branching storylines',
@@ -27,107 +27,137 @@ const ProjectDetail = () => {
         'Dynamic quiz system with multimedia questions',
         'Modern UI/UX design with SFML graphics',
         'Save/load game state functionality',
-        'Team-based development with 11 contributors'
+        'Cross-platform compatibility'
       ],
       challenges: [
-        'Coordinating development across 11 team members',
-        'Integrating multimedia content seamlessly',
-        'Managing large binary assets in version control',
-        'Ensuring consistent code quality across contributors'
+        'Integrating multimedia content seamlessly with C++',
+        'Managing complex narrative branching logic',
+        'Optimizing performance for smooth video playback',
+        'Creating intuitive user interface with SFML'
       ],
       duration: '4 months',
-      teamSize: '11 developers',
+      teamSize: 'Team project',
       role: 'Core Developer & Integration Specialist'
     },
     'terrain-generation': {
-      title: 'Terrain Generation Project',
+      title: 'Terrain Generation',
       subtitle: 'Procedural Landscape System',
-      description: 'A sophisticated procedural terrain generation system built in Unity, focusing on creating realistic and diverse landscapes using advanced algorithms and noise functions.',
+      description: 'Procedural terrain generation tool built in Unity using Perlin noise to simulate realistic landscapes with advanced algorithms.',
       fullDescription: [
         'This project explores the fascinating world of procedural content generation, specifically focusing on creating realistic terrain systems that can generate infinite, diverse landscapes.',
-        'The system employs multiple layers of Perlin noise, Simplex noise, and custom algorithms to create natural-looking terrain features including mountains, valleys, rivers, and biome transitions.',
-        'Advanced features include real-time LOD (Level of Detail) systems for performance optimization, texture splatting based on terrain characteristics, and dynamic vegetation placement.',
+        'The system employs multiple layers of Perlin noise and custom algorithms to create natural-looking terrain features including mountains, valleys, rivers, and biome transitions.',
+        'Advanced features include real-time terrain modification, texture splatting based on terrain characteristics, and dynamic vegetation placement systems.',
         'The project serves as both a technical showcase and a learning platform for understanding advanced graphics programming, procedural generation techniques, and optimization strategies in Unity.'
       ],
-      tech: ['Unity', 'C#', 'Perlin Noise', 'Simplex Noise', 'Compute Shaders', 'Level of Detail (LOD)'],
+      tech: ['Unity', 'C#', 'Perlin Noise', 'Procedural Generation', 'Graphics Programming'],
       github: 'https://github.com/Fanos-dev/TerrainGeneration',
       features: [
         'Multi-octave noise generation for realistic terrain',
         'Real-time terrain modification and sculpting',
         'Biome-based texture and vegetation systems',
-        'Level of Detail (LOD) optimization',
-        'Dynamic weather and atmospheric effects',
-        'Exportable heightmaps and terrain data'
+        'Dynamic height-based terrain coloring',
+        'Exportable heightmaps and terrain data',
+        'Performance-optimized mesh generation'
       ],
       challenges: [
         'Optimizing performance for large-scale terrains',
         'Creating seamless biome transitions',
-        'Implementing efficient LOD systems',
+        'Implementing efficient mesh generation algorithms',
         'Balancing realism with artistic control'
       ],
       duration: '3 months',
       teamSize: 'Solo project',
       role: 'Lead Developer & Technical Artist'
     },
-    'game-jam-portfolio': {
-      title: 'Game Jam Portfolio',
-      subtitle: 'Collection of Experimental Games',
-      description: 'A diverse collection of games created during various game jams, showcasing creativity, rapid prototyping skills, and the ability to create complete gaming experiences under tight time constraints.',
+    'lava': {
+      title: 'Lava',
+      subtitle: 'Fast-Paced 2D Survival Platformer',
+      description: 'A fast-paced 2D survival platformer made for a game jam. Players must escape rising lava while navigating challenging obstacles.',
       fullDescription: [
-        'Game jams represent the ultimate test of creativity, technical skill, and time management. This portfolio showcases a variety of games created during competitive game development events, each built within 48-72 hour time limits.',
-        'The collection includes platformers that experiment with unique movement mechanics, puzzle games that challenge conventional thinking, and experimental titles that push the boundaries of traditional game design.',
-        'Each project demonstrates different aspects of game development, from rapid prototyping and asset creation to gameplay balancing and user experience design.',
-        'These experiences have been invaluable in developing skills in rapid iteration, creative problem-solving, and working under pressure while maintaining quality standards.'
+        'Lava is an intense 2D survival platformer created during a competitive game jam, showcasing rapid prototyping skills and creative game design under extreme time constraints.',
+        'The game features tight platforming mechanics, escalating difficulty, and a unique rising lava mechanic that creates constant tension and urgency.',
+        'Players must navigate through increasingly challenging obstacle courses while the deadly lava rises from below, forcing quick decision-making and precise movement.',
+        'This project demonstrates ability to create complete, polished gaming experiences within tight deadlines while maintaining engaging gameplay and visual appeal.'
       ],
-      tech: ['Unity', 'C#', 'Game Design', 'Rapid Prototyping', 'Asset Creation', 'Audio Implementation'],
-      link: 'https://fanosgames.itch.io',
+      tech: ['Unity', 'C#', 'Game Jam Development', '2D Physics', 'Level Design'],
+      link: 'https://fanosgames.itch.io/lava',
       features: [
-        'Diverse genre exploration (platformers, puzzles, experimental)',
-        'Complete games developed in 48-72 hours',
-        'Original artwork and audio implementation',
-        'Innovative gameplay mechanics',
-        'Community engagement and feedback integration',
-        'Cross-platform compatibility'
+        'Smooth and responsive 2D platforming controls',
+        'Dynamic rising lava threat system',
+        'Progressive difficulty scaling',
+        'Engaging obstacle and trap design',
+        'Retro-inspired pixel art aesthetic',
+        'Tight gameplay loop optimized for replayability'
       ],
       challenges: [
-        'Extreme time constraints requiring rapid decision-making',
-        'Balancing scope with available development time',
-        'Creating engaging experiences with minimal assets',
-        'Team coordination in high-pressure environments'
+        'Creating engaging gameplay within jam time limits',
+        'Balancing difficulty progression',
+        'Implementing smooth 2D physics and controls',
+        'Designing levels that encourage speedrunning'
       ],
-      duration: 'Multiple events (2-3 days each)',
-      teamSize: 'Solo and team projects (2-4 members)',
+      duration: '48 hours (Game Jam)',
+      teamSize: 'Solo developer',
       role: 'Game Designer & Developer'
     },
-    'web-applications': {
-      title: 'Web Applications',
-      subtitle: 'Full-Stack Development Projects',
-      description: 'A collection of modern web applications built using cutting-edge technologies, demonstrating proficiency in full-stack development, responsive design, and user experience optimization.',
+    'the-beyond': {
+      title: 'The Beyond',
+      subtitle: 'Atmospheric Exploration Game',
+      description: 'Atmospheric exploration game created for a game jam. Explore an alien world with minimalist visuals and immersive sound design.',
       fullDescription: [
-        'This portfolio encompasses various web application projects that showcase modern full-stack development practices and technologies.',
-        'Projects range from dynamic single-page applications built with React to complex backend systems utilizing Node.js and database technologies.',
-        'Each application demonstrates different aspects of web development including responsive design, API integration, database management, and deployment strategies.',
-        'The focus has been on creating user-friendly interfaces while maintaining robust, scalable backend architectures that can handle real-world usage scenarios.'
+        'The Beyond is an atmospheric exploration game that focuses on environmental storytelling and immersive audio-visual experiences.',
+        'Set in an alien world, the game emphasizes exploration, discovery, and atmosphere over traditional gameplay mechanics, creating a unique meditative gaming experience.',
+        'The minimalist visual design combined with carefully crafted audio creates an otherworldly atmosphere that draws players into the mysterious alien landscape.',
+        'This project showcases skills in environmental design, audio integration, and creating compelling experiences through atmosphere rather than traditional game mechanics.'
       ],
-      tech: ['React', 'Node.js', 'MongoDB', 'Express.js', 'CSS3', 'JavaScript ES6+'],
-      github: 'https://github.com/Fanos-dev',
+      tech: ['Unity', 'C#', 'Audio Design', 'Environmental Art', 'Atmospheric Design'],
+      link: 'https://fanosgames.itch.io/the-beyond',
       features: [
-        'Responsive, mobile-first design approach',
-        'RESTful API development and integration',
-        'Database design and optimization',
-        'User authentication and authorization',
-        'Real-time features using WebSockets',
-        'Modern development workflow and deployment'
+        'Immersive atmospheric exploration',
+        'Minimalist visual design philosophy',
+        'Rich ambient audio landscape',
+        'Environmental storytelling elements',
+        'Mysterious alien world setting',
+        'Contemplative pacing and gameplay'
       ],
       challenges: [
-        'Ensuring cross-browser compatibility',
-        'Optimizing performance for various devices',
-        'Implementing secure authentication systems',
-        'Managing complex state in frontend applications'
+        'Creating engaging exploration without traditional mechanics',
+        'Balancing minimalism with visual interest',
+        'Designing compelling environmental narratives',
+        'Optimizing atmosphere-heavy scenes for performance'
       ],
-      duration: 'Ongoing projects',
-      teamSize: 'Various (solo and collaborative)',
-      role: 'Full-Stack Developer'
+      duration: '72 hours (Game Jam)',
+      teamSize: 'Solo developer',
+      role: 'Game Designer, Developer & Audio Designer'
+    },
+    'pos-inventory-system': {
+      title: 'POS & Inventory Management System',
+      subtitle: 'Desktop Business Application',
+      description: 'Desktop application for restaurant management, developed in C# and SQL Server. Automates order processing, inventory tracking, and report generation.',
+      fullDescription: [
+        'A comprehensive Point of Sale and Inventory Management System designed specifically for restaurant operations, demonstrating enterprise-level desktop application development.',
+        'The system integrates order processing, inventory management, sales tracking, and comprehensive reporting into a unified platform that streamlines restaurant operations.',
+        'Built with C# and SQL Server, the application features a robust database architecture, intuitive WinForms interface, and automated report generation using SAP Crystal Reports.',
+        'This project showcases skills in database design, business application development, and creating solutions that solve real-world operational challenges in the food service industry.'
+      ],
+      tech: ['C#', 'SQL Server', 'WinForms', 'SAP Crystal Reports', 'Database Design', 'Business Logic'],
+      github: 'https://github.com/Fanos-dev',
+      features: [
+        'Complete order processing and POS functionality',
+        'Real-time inventory tracking and management',
+        'Automated low-stock alerts and reordering',
+        'Comprehensive sales and performance reporting',
+        'Multi-user support with role-based access',
+        'Data backup and recovery systems'
+      ],
+      challenges: [
+        'Designing efficient database schema for complex operations',
+        'Creating intuitive interfaces for non-technical users',
+        'Implementing real-time inventory updates',
+        'Ensuring data integrity across concurrent users'
+      ],
+      duration: '6 months',
+      teamSize: 'Solo developer',
+      role: 'Full-Stack Developer & Database Architect'
     }
   };
 
