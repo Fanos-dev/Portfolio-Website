@@ -98,7 +98,7 @@ const Projects = () => {
                   {/* Project Content */}
                   <div className="flex-1 flex flex-col">
                     <div className="mb-4">
-                      <h3 className="h2 mb-2 text-white group-hover:text-cyan-400 transition-colors duration-300">
+                      <h3 className="h2 mb-2 text-white group-hover:text-blue-300 transition-colors duration-300">
                         {project.title}
                       </h3>
                       <p className="body-md text-cyan-400 mb-3 font-medium">
