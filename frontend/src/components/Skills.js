@@ -27,10 +27,10 @@ const Skills = () => {
     switch (color) {
       case 'yellow':
         return {
-          icon: 'text-yellow-400',
-          bg: 'bg-yellow-400/20',
-          border: 'border-yellow-400/30',
-          hover: 'hover:border-yellow-400/50'
+          icon: 'text-blue-300',
+          bg: 'bg-blue-300/20',
+          border: 'border-blue-300/30',
+          hover: 'hover:border-blue-300/50'
         };
       case 'blue':
         return {
