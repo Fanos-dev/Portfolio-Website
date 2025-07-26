@@ -40,7 +40,7 @@ const Projects = () => {
       link: 'https://fanosgames.itch.io',
       icon: Gamepad2,
       featured: false,
-      color: 'from-purple-600/20 to-pink-600/20'
+      color: 'from-green-400/20 to-lime-400/20'
     },
     {
       id: 'web-applications',
