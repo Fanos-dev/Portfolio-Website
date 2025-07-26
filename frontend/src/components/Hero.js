@@ -52,7 +52,7 @@ const Hero = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:bg-gray-700 transition-all duration-300 hover:scale-110 glow-icon"
+                  className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-blue-300 hover:bg-gray-700 transition-all duration-300 hover:scale-110 glow-icon"
                   aria-label={social.name}
                 >
                   <IconComponent size={20} />
