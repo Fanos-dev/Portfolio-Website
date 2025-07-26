@@ -52,7 +52,7 @@ const Projects = () => {
       github: 'https://github.com/Fanos-dev',
       icon: ExternalLink,
       featured: false,
-      color: 'from-cyan-600/20 to-blue-600/20'
+      color: 'from-blue-400/20 to-cyan-400/20'
     }
   ];
 
