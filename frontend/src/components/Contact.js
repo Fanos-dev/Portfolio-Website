@@ -1,37 +1,7 @@
-import React, { useState } from 'react';
-import { Mail, Linkedin, Github, Send, MapPin, Phone } from 'lucide-react';
-import { useToast } from '../hooks/use-toast';
+import React from 'react';
+import { Mail, Linkedin, Github, MapPin } from 'lucide-react';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Mock form submission - in real app, this would connect to backend
-    setTimeout(() => {
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for reaching out. I'll get back to you soon!",
-      });
-      setFormData({ name: '', email: '', message: '' });
-      setIsSubmitting(false);
-    }, 1000);
-  };
 
   const contactInfo = [
     {
