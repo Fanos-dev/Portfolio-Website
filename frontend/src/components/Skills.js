@@ -103,8 +103,8 @@ const Skills = () => {
             {/* Experience Highlight */}
             <div className="feature-card">
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-yellow-400/20 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Target size={24} className="text-yellow-400" />
+                <div className="w-12 h-12 bg-blue-300/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Target size={24} className="text-blue-300" />
                 </div>
                 <div>
                   <h4 className="h3 mb-3 text-white">Problem-Solving Approach</h4>
