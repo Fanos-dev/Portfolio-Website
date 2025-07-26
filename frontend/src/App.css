@@ -1,30 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
 
 :root {
-  /* Dark Theme Base with Gradient */
-  --bg-primary: #0d0d0d;
-  --bg-secondary: #1a1a2e;
-  --bg-tertiary: rgb(38, 40, 42);
-  --bg-gradient: linear-gradient(180deg, #0d0d0d 0%, #1a1a2e 100%);
+  /* Ocean-Inspired Color Palette */
+  --oxford-blue: #001b2e;
+  --charcoal: #294c60;
+  --moonstone: #53a2be;
+  --tea-green: #d7e8ba;
+  --seasalt: #fcfaf9;
+  
+  /* Background System */
+  --bg-primary: var(--oxford-blue);
+  --bg-secondary: var(--charcoal);
+  --bg-tertiary: #3a5a75;
+  --bg-gradient: linear-gradient(180deg, var(--oxford-blue) 0%, var(--charcoal) 100%);
   
   /* Text Hierarchy */
-  --text-primary: rgb(255, 255, 255);
-  --text-secondary: rgb(218, 218, 218);
-  --text-muted: rgb(161, 161, 170);
+  --text-primary: var(--seasalt);
+  --text-secondary: rgba(252, 250, 249, 0.9);
+  --text-muted: rgba(252, 250, 249, 0.6);
   
   /* Border System */
-  --border-primary: rgb(63, 63, 63);
-  --border-subtle: rgba(255, 255, 255, 0.1);
+  --border-primary: rgba(83, 162, 190, 0.3);
+  --border-subtle: rgba(252, 250, 249, 0.1);
   
-  /* Neon Blue Accent System */
-  --accent-primary: #00f0ff;
-  --accent-hover: #00d4e6;
-  --accent-pressed: #00b8cc;
-  --accent-bg: rgba(0, 240, 255, 0.1);
-  --accent-glow: rgba(0, 240, 255, 0.3);
+  /* Moonstone Accent System */
+  --accent-primary: var(--moonstone);
+  --accent-hover: #6bb8d1;
+  --accent-pressed: #4a92aa;
+  --accent-bg: rgba(83, 162, 190, 0.1);
+  --accent-glow: rgba(83, 162, 190, 0.4);
   
-  /* Secondary Accent */
-  --accent-purple: rgb(127, 74, 142);
+  /* Tea Green Secondary Accent */
+  --accent-secondary: var(--tea-green);
+  --accent-secondary-hover: #e1ecc4;
+  --accent-secondary-glow: rgba(215, 232, 186, 0.3);
 }
 
 * {
