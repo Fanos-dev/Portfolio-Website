@@ -100,7 +100,7 @@ const Contact = () => {
                             href={contact.href}
                             target={contact.href.startsWith('http') ? '_blank' : undefined}
                             rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                            className="body-md text-gray-300 hover:text-yellow-400 transition-colors"
+                            className="body-md text-gray-300 hover:text-blue-300 transition-colors"
                           >
                             {contact.value}
                           </a>
