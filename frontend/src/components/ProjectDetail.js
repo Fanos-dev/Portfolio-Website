@@ -175,7 +175,7 @@ const ProjectDetail = () => {
               {/* Project Info Cards */}
               <div className="grid md:grid-cols-3 gap-6 mb-12">
                 <div className="feature-card text-center">
-                  <Calendar size={32} className="text-cyan-400 mx-auto mb-4 glow-icon" />
+                  <Calendar size={32} className="text-blue-300 mx-auto mb-4 glow-icon" />
                   <h3 className="h3 text-white mb-2">Duration</h3>
                   <p className="body-md text-gray-400">{project.duration}</p>
                 </div>
