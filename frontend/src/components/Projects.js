@@ -89,7 +89,7 @@ const Projects = () => {
                     <div className={`w-16 h-16 bg-gradient-to-br ${project.color} rounded-xl flex items-center justify-center glow-icon`}>
                       <IconComponent size={32} className="text-blue-300" />
                     </div>
-                    <div className="flex items-center text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="flex items-center text-blue-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <span className="text-sm font-medium mr-2">View Details</span>
                       <ArrowRight size={16} />
                     </div>
