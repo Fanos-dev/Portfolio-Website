@@ -16,7 +16,7 @@ const Projects = () => {
       github: 'https://github.com/Fanos-dev/EchoesOfFate',
       icon: GamepadIcon,
       featured: true,
-      color: 'from-blue-600/20 to-purple-600/20'
+      color: 'from-blue-500/20 to-moonstone/20'
     },
     {
       id: 'terrain-generation',
