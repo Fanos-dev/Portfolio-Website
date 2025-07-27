@@ -3,6 +3,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Portfolio from "./components/Portfolio";
 import ProjectDetail from "./components/ProjectDetail";
+import EducationLeadership from "./components/EducationLeadership";
 
 function App() {
   return (
