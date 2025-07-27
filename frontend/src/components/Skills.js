@@ -1,5 +1,6 @@
 import React from 'react';
 import { Code, Database, Settings, Users, Lightbulb, Target } from 'lucide-react';
+import EditableText from './EditableText';
 
 const Skills = () => {
   const skillCategories = [
