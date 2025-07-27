@@ -69,11 +69,21 @@ const Projects = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="display-md mb-6 text-white">Featured Projects</h2>
-            <p className="body-lg max-w-2xl mx-auto text-gray-400">
-              A showcase of my work spanning game development, desktop applications, 
-              and creative problem-solving through code.
-            </p>
+            <EditableText
+              sectionId="projects-title"
+              defaultContent="Featured Projects"
+              className="display-md mb-6 text-white"
+              element="h2"
+              maxLength={50}
+            />
+            <EditableText
+              sectionId="projects-subtitle"
+              defaultContent="A showcase of my work spanning game development, desktop applications, and creative problem-solving through code."
+              className="body-lg max-w-2xl mx-auto text-gray-400"
+              element="p"
+              multiline={true}
+              maxLength={300}
+            />
           </div>
 
           {/* Projects Grid - Left to Right, Top to Bottom */}
