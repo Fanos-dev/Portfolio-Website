@@ -76,12 +76,28 @@ const EducationLeadership = () => {
               </button>
               
               <div className="text-center mb-12">
-                <h1 className="display-lg mb-4 text-white">Education and Leadership</h1>
-                <p className="h2 text-cyan-400 mb-6">Academic Excellence & Leadership Journey</p>
-                <p className="body-lg max-w-3xl mx-auto text-gray-400">
-                  A comprehensive overview of my academic achievements, leadership roles, and 
-                  commitment to excellence in both educational and organizational settings.
-                </p>
+                <EditableText
+                  sectionId="edu-leadership-title"
+                  defaultContent="Education and Leadership"
+                  className="display-lg mb-4 text-white"
+                  element="h1"
+                  maxLength={100}
+                />
+                <EditableText
+                  sectionId="edu-leadership-subtitle"
+                  defaultContent="Academic Excellence & Leadership Journey"
+                  className="h2 text-cyan-400 mb-6"
+                  element="p"
+                  maxLength={100}
+                />
+                <EditableText
+                  sectionId="edu-leadership-description"
+                  defaultContent="A comprehensive overview of my academic achievements, leadership roles, and commitment to excellence in both educational and organizational settings."
+                  className="body-lg max-w-3xl mx-auto text-gray-400"
+                  element="p"
+                  multiline={true}
+                  maxLength={500}
+                />
               </div>
 
               {/* Info Cards */}
