@@ -3,21 +3,21 @@ import { GraduationCap, Users, Trophy } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const About = () => {
+  const navigate = useNavigate();
+  
   const highlights = [
     {
       icon: GraduationCap,
-      title: 'Education',
-      description: 'BSc Computer Science & IT at University of KwaZulu-Natal (Class of 2025)'
-    },
-    {
-      icon: Users,
-      title: 'Leadership',
-      description: 'COMP315 Class Representative (2025) & Former Head Prefect'
+      title: 'Education and Leadership',
+      description: 'BSc Computer Science & IT at UKZN, Class Representative, Former Head Prefect',
+      isClickable: true,
+      onClick: () => navigate('/education-leadership')
     },
     {
       icon: Trophy,
       title: 'Expertise',
-      description: 'Game development, systems design, and full-stack applications'
+      description: 'Game development, systems design, and full-stack applications',
+      isClickable: false
     }
   ];
 
