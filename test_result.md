@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "remove the send me a message part of the website"
+user_problem_statement: "Update the 'Education and Leadership' card on my portfolio homepage so that when clicked, it opens a new page titled 'Education and Leadership' with detailed education and leadership information."
 
 backend:
   - task: "Basic API functionality - GET /api/ endpoint"
