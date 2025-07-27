@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ArrowLeft, ExternalLink, Github, Calendar, Users, Code, Target } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Github, Calendar, Users, Code, Target, Image, ZoomIn } from 'lucide-react';
 import Header from './Header';
 import Footer from './Footer';
 
