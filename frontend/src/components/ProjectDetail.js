@@ -419,6 +419,40 @@ const ProjectDetail = () => {
             </div>
           </div>
         </section>
+
+        {/* Gallery Section */}
+        {project.gallery && project.gallery.length > 0 && (
+          <section className="py-16 bg-gray-800/30">
+            <div className="container">
+              <div className="max-w-4xl mx-auto">
+                <div className="flex items-center space-x-3 mb-8">
+                  <Image size={24} className="text-blue-300 glow-icon" />
+                  <h2 className="h1 text-white">Project Gallery</h2>
+                </div>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  {project.gallery.map((item, index) => (
+                    <div key={index} className="feature-card group cursor-pointer hover:border-blue-300/50 transition-all duration-300">
+                      <div className="aspect-video bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden">
+                        <div className="text-center">
+                          <div className="w-16 h-16 bg-blue-300/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <Image size={32} className="text-blue-300" />
+                          </div>
+                          <p className="text-gray-400 body-sm">Image Placeholder</p>
+                        </div>
+                        <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                          <ZoomIn size={24} className="text-white" />
+                        </div>
+                      </div>
+                      <h3 className="h3 text-white mb-2">{item.title}</h3>
+                      <p className="body-md text-gray-400">{item.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
       </main>
 
       <Footer />
