@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowLeft, GraduationCap, Users, Award, MapPin, Calendar, User, Target } from 'lucide-react';
+import { ArrowLeft, GraduationCap, Users, Award, MapPin, Calendar, User, Target, Image, ZoomIn } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
