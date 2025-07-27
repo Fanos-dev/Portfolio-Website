@@ -89,7 +89,29 @@ const ProjectDetail = () => {
       ],
       duration: '3 months',
       teamSize: 'Solo project',
-      role: 'Lead Developer & Technical Artist'
+      role: 'Lead Developer & Technical Artist',
+      gallery: [
+        {
+          type: 'image',
+          title: 'Terrain Overview',
+          description: 'Generated landscape with multiple biomes'
+        },
+        {
+          type: 'image',
+          title: 'Height Map',
+          description: 'Procedural height map generation'
+        },
+        {
+          type: 'image',
+          title: 'Texture Splatting',
+          description: 'Biome-based texture application'
+        },
+        {
+          type: 'image',
+          title: 'Vegetation System',
+          description: 'Dynamic vegetation placement'
+        }
+      ]
     },
     'lava': {
       title: 'Lava',
