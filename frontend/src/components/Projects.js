@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ExternalLink, Github, GamepadIcon, Mountain, Gamepad2, ArrowRight, Zap, Database } from 'lucide-react';
+import EditableText from './EditableText';
 
 const Projects = () => {
   const navigate = useNavigate();
