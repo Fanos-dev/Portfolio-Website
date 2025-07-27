@@ -12,6 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Portfolio />} />
           <Route path="/project/:projectId" element={<ProjectDetail />} />
+          <Route path="/education-leadership" element={<EducationLeadership />} />
         </Routes>
       </BrowserRouter>
     </div>
