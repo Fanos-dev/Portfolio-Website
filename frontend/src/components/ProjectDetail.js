@@ -235,7 +235,29 @@ const ProjectDetail = () => {
       ],
       duration: '6 months',
       teamSize: 'Solo developer',
-      role: 'Full-Stack Developer & Database Architect'
+      role: 'Full-Stack Developer & Database Architect',
+      gallery: [
+        {
+          type: 'image',
+          title: 'POS Interface',
+          description: 'User-friendly point of sale system'
+        },
+        {
+          type: 'image',
+          title: 'Inventory Dashboard',
+          description: 'Real-time inventory management'
+        },
+        {
+          type: 'image',
+          title: 'Reports Screen',
+          description: 'Comprehensive sales reporting'
+        },
+        {
+          type: 'image',
+          title: 'Database Schema',
+          description: 'Efficient database design'
+        }
+      ]
     }
   };
 
