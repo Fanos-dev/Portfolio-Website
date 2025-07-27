@@ -63,11 +63,21 @@ const Skills = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="display-md mb-6 text-white">Skills & Expertise</h2>
-            <p className="body-lg max-w-2xl mx-auto text-gray-400">
-              A comprehensive toolkit built through academic studies, hands-on projects, 
-              and collaborative development experiences.
-            </p>
+            <EditableText
+              sectionId="skills-title"
+              defaultContent="Skills & Expertise"
+              className="display-md mb-6 text-white"
+              element="h2"
+              maxLength={50}
+            />
+            <EditableText
+              sectionId="skills-subtitle"
+              defaultContent="A comprehensive toolkit built through academic studies, hands-on projects, and collaborative development experiences."
+              className="body-lg max-w-2xl mx-auto text-gray-400"
+              element="p"
+              multiline={true}
+              maxLength={300}
+            />
           </div>
 
           {/* Skills Grid */}
