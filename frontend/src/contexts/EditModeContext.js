@@ -12,9 +12,21 @@ export const useEditMode = () => {
 
 export const EditModeProvider = ({ children }) => {
   const [isEditMode, setIsEditMode] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [content, setContent] = useState({});
   const [previewMode, setPreviewMode] = useState(false);
   const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false);
+
+  // Password for edit mode - you can change this to your preferred password
+  const EDIT_PASSWORD = 'portfolio2025';
+
+  // Check if user is authenticated on mount
+  useEffect(() => {
+    const authToken = localStorage.getItem('portfolioAuthToken');
+    if (authToken === 'authenticated') {
+      setIsAuthenticated(true);
+    }
+  }, []);
 
   // Load saved content from localStorage on mount
   useEffect(() => {
@@ -27,6 +39,24 @@ export const EditModeProvider = ({ children }) => {
       }
     }
   }, []);
+
+  // Authenticate user
+  const authenticate = (password) => {
+    if (password === EDIT_PASSWORD) {
+      setIsAuthenticated(true);
+      localStorage.setItem('portfolioAuthToken', 'authenticated');
+      return true;
+    }
+    return false;
+  };
+
+  // Logout user
+  const logout = () => {
+    setIsAuthenticated(false);
+    setIsEditMode(false);
+    setPreviewMode(false);
+    localStorage.removeItem('portfolioAuthToken');
+  };
 
   // Save content to localStorage
   const saveContent = () => {
@@ -54,8 +84,18 @@ export const EditModeProvider = ({ children }) => {
     return content[sectionId] || defaultContent;
   };
 
-  // Toggle edit mode
+  // Toggle edit mode (with authentication check)
   const toggleEditMode = () => {
+    if (!isAuthenticated) {
+      const password = prompt('Enter the password to enable edit mode:');
+      if (!password) return;
+      
+      if (!authenticate(password)) {
+        alert('Incorrect password. Access denied.');
+        return;
+      }
+    }
+
     if (isEditMode && hasUnsavedChanges) {
       const shouldSave = window.confirm('You have unsaved changes. Would you like to save before exiting edit mode?');
       if (shouldSave) {
@@ -83,6 +123,7 @@ export const EditModeProvider = ({ children }) => {
 
   const value = {
     isEditMode,
+    isAuthenticated,
     previewMode,
     content,
     hasUnsavedChanges,
@@ -91,7 +132,8 @@ export const EditModeProvider = ({ children }) => {
     saveContent,
     updateContent,
     getContent,
-    resetChanges
+    resetChanges,
+    logout
   };
 
   return (
