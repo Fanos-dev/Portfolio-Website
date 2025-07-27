@@ -141,7 +141,24 @@ const ProjectDetail = () => {
       ],
       duration: '48 hours (Game Jam)',
       teamSize: 'Solo developer',
-      role: 'Game Designer & Developer'
+      role: 'Game Designer & Developer',
+      gallery: [
+        {
+          type: 'image',
+          title: 'Gameplay Screenshot',
+          description: 'Fast-paced platforming action'
+        },
+        {
+          type: 'image',
+          title: 'Lava Rising',
+          description: 'Dynamic lava threat system'
+        },
+        {
+          type: 'image',
+          title: 'Level Design',
+          description: 'Challenging obstacle courses'
+        }
+      ]
     },
     'the-beyond': {
       title: 'The Beyond',
