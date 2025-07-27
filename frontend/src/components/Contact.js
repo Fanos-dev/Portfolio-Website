@@ -38,22 +38,42 @@ const Contact = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="display-md mb-6 text-white">Let's Connect</h2>
-            <p className="body-lg max-w-2xl mx-auto text-gray-400">
-              Have a project in mind or just want to chat about technology? 
-              I'd love to hear from you. Let's build something amazing together.
-            </p>
+            <EditableText
+              sectionId="contact-title"
+              defaultContent="Let's Connect"
+              className="display-md mb-6 text-white"
+              element="h2"
+              maxLength={50}
+            />
+            <EditableText
+              sectionId="contact-subtitle"
+              defaultContent="Have a project in mind or just want to chat about technology? I'd love to hear from you. Let's build something amazing together."
+              className="body-lg max-w-2xl mx-auto text-gray-400"
+              element="p"
+              multiline={true}
+              maxLength={300}
+            />
           </div>
 
           <div className="max-w-4xl mx-auto">
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
-                <h3 className="h1 mb-6 text-white">Get In Touch</h3>
-                <p className="body-md text-gray-400 mb-8">
-                  I'm always open to discussing new opportunities, collaborations, 
-                  or just connecting with fellow developers and tech enthusiasts.
-                </p>
+                <EditableText
+                  sectionId="contact-main-title"
+                  defaultContent="Get In Touch"
+                  className="h1 mb-6 text-white"
+                  element="h3"
+                  maxLength={50}
+                />
+                <EditableText
+                  sectionId="contact-description"
+                  defaultContent="I'm always open to discussing new opportunities, collaborations, or just connecting with fellow developers and tech enthusiasts."
+                  className="body-md text-gray-400 mb-8"
+                  element="p"
+                  multiline={true}
+                  maxLength={300}
+                />
               </div>
 
               {/* Contact Methods */}
