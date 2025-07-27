@@ -250,12 +250,24 @@ const ProjectDetail = () => {
                 {/* Main Content */}
                 <div className="lg:col-span-2 space-y-8">
                   <div>
-                    <h2 className="h1 mb-6 text-white">Project Overview</h2>
+                    <EditableText
+                      sectionId={`project-${projectId}-overview-title`}
+                      defaultContent="Project Overview"
+                      className="h1 mb-6 text-white"
+                      element="h2"
+                      maxLength={50}
+                    />
                     <div className="space-y-4">
                       {project.fullDescription.map((paragraph, index) => (
-                        <p key={index} className="body-md text-gray-400 leading-relaxed">
-                          {paragraph}
-                        </p>
+                        <EditableText
+                          key={index}
+                          sectionId={`project-${projectId}-overview-paragraph-${index}`}
+                          defaultContent={paragraph}
+                          className="body-md text-gray-400 leading-relaxed"
+                          element="p"
+                          multiline={true}
+                          maxLength={1000}
+                        />
                       ))}
                     </div>
                   </div>
