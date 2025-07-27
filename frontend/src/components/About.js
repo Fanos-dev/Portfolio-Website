@@ -78,17 +78,30 @@ const About = () => {
           </div>
 
           {/* Highlights Grid */}
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {highlights.map((highlight, index) => {
               const IconComponent = highlight.icon;
+              const CardComponent = highlight.isClickable ? 'button' : 'div';
+              
               return (
-                <div key={index} className="feature-card text-center">
+                <CardComponent
+                  key={index}
+                  className={`feature-card text-center ${
+                    highlight.isClickable 
+                      ? 'cursor-pointer hover:bg-gray-800/50 transition-colors duration-300 transform hover:scale-105' 
+                      : ''
+                  }`}
+                  onClick={highlight.onClick}
+                >
                   <div className="w-16 h-16 bg-blue-300/20 rounded-full flex items-center justify-center mx-auto mb-6">
                     <IconComponent size={32} className="text-blue-300" />
                   </div>
                   <h4 className="h3 mb-4 text-white">{highlight.title}</h4>
                   <p className="body-md text-gray-400">{highlight.description}</p>
-                </div>
+                  {highlight.isClickable && (
+                    <p className="body-sm text-blue-300 mt-2">Click to learn more →</p>
+                  )}
+                </CardComponent>
               );
             })}
           </div>
