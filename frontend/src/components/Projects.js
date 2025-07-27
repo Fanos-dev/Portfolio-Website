@@ -133,12 +133,21 @@ const Projects = () => {
 
                     {/* Title and Summary */}
                     <div className="mb-4 flex-1">
-                      <h3 className="h2 mb-3 text-white group-hover:text-blue-300 transition-colors duration-300">
-                        {project.title}
-                      </h3>
-                      <p className="body-sm text-gray-400 leading-relaxed">
-                        {project.summary}
-                      </p>
+                      <EditableText
+                        sectionId={`project-card-${project.id}-title`}
+                        defaultContent={project.title}
+                        className="h2 mb-3 text-white group-hover:text-blue-300 transition-colors duration-300"
+                        element="h3"
+                        maxLength={50}
+                      />
+                      <EditableText
+                        sectionId={`project-card-${project.id}-summary`}
+                        defaultContent={project.summary}
+                        className="body-sm text-gray-400 leading-relaxed"
+                        element="p"
+                        multiline={true}
+                        maxLength={300}
+                      />
                     </div>
 
                     {/* Tech Stack */}
