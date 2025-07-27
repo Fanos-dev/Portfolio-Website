@@ -13,8 +13,18 @@ const Projects = () => {
       tech: ['C++', 'SFML', 'sfeMovie'],
       github: 'https://github.com/Fanos-dev/EchoesOfFate',
       icon: GamepadIcon,
-      category: 'Game Development',
+      category: ['University Project', 'Game Development'],
       color: 'from-purple-500/20 to-blue-500/20'
+    },
+    {
+      id: 'pos-inventory-system',
+      title: 'POS & Inventory Management System',
+      summary: 'Desktop app for a restaurant, developed in C# and SQL Server. Automates order processing, inventory tracking, and report generation.',
+      tech: ['C#', 'SQL Server', 'WinForms', 'Crystal Reports'],
+      github: 'https://github.com/Fanos-dev',
+      icon: Database,
+      category: ['Desktop Application'],
+      color: 'from-blue-500/20 to-cyan-500/20'
     },
     {
       id: 'terrain-generation',
@@ -23,7 +33,7 @@ const Projects = () => {
       tech: ['Unity', 'C#', 'Perlin Noise'],
       github: 'https://github.com/Fanos-dev/TerrainGeneration',
       icon: Mountain,
-      category: 'Game Development',
+      category: ['Game Development'],
       color: 'from-green-500/20 to-teal-500/20'
     },
     {
@@ -33,7 +43,7 @@ const Projects = () => {
       tech: ['Unity', 'C#', 'Game Jam'],
       link: 'https://fanosgames.itch.io/lava',
       icon: Zap,
-      category: 'Game Jam',
+      category: ['Game Jam'],
       color: 'from-red-500/20 to-orange-500/20'
     },
     {
@@ -43,19 +53,9 @@ const Projects = () => {
       tech: ['Unity', 'C#', 'Audio Design'],
       link: 'https://fanosgames.itch.io/the-beyond',
       icon: Gamepad2,
-      category: 'Game Jam',
+      category: ['Game Jam'],
       color: 'from-indigo-500/20 to-purple-500/20'
     },
-    {
-      id: 'pos-inventory-system',
-      title: 'POS & Inventory Management System',
-      summary: 'Desktop app for a restaurant, developed in C# and SQL Server. Automates order processing, inventory tracking, and report generation.',
-      tech: ['C#', 'SQL Server', 'WinForms', 'Crystal Reports'],
-      github: 'https://github.com/Fanos-dev',
-      icon: Database,
-      category: 'Desktop Application',
-      color: 'from-blue-500/20 to-cyan-500/20'
-    }
   ];
 
   const handleProjectClick = (projectId) => {
@@ -105,11 +105,19 @@ const Projects = () => {
 
                   {/* Project Content */}
                   <div className="flex-1 flex flex-col">
+
                     {/* Category Badge */}
                     <div className="mb-3">
-                      <span className="inline-block px-3 py-1 bg-blue-300/10 border border-blue-300/20 rounded-full text-xs text-blue-300 font-medium">
-                        {project.category}
-                      </span>
+                      <div className="flex flex-wrap gap-2">
+                        {project.category.slice(0, 3).map((category, categoryIndex) => (
+                          <span 
+                            key={categoryIndex}
+                            className="inline-block px-3 py-1 bg-blue-300/10 border border-blue-300/20 rounded-full text-xs text-blue-300 font-medium"
+                          >
+                            {category}
+                          </span>
+                        ))}
+                      </div>
                     </div>
 
                     {/* Title and Summary */}
