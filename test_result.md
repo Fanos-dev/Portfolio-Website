@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Update the 'Education and Leadership' card on my portfolio homepage so that when clicked, it opens a new page titled 'Education and Leadership' with detailed education and leadership information."
+user_problem_statement: "Enable content editing mode on my website. I want to manually add, modify, or delete text, links, and media across all sections/pages, including Home, Projects, About, Skills, and Contact. Give me visual access to the editor and allow me to click into any section to update content. Also include an option to preview changes before publishing and secure access so only I can edit."
 
 backend:
   - task: "Basic API functionality - GET /api/ endpoint"
