@@ -196,11 +196,28 @@ const ProjectDetail = () => {
               </button>
               
               <div className="text-center mb-12">
-                <h1 className="display-lg mb-4 text-white">{project.title}</h1>
-                <p className="h2 text-cyan-400 mb-6">{project.subtitle}</p>
-                <p className="body-lg max-w-3xl mx-auto text-gray-400">
-                  {project.description}
-                </p>
+                <EditableText
+                  sectionId={`project-${projectId}-title`}
+                  defaultContent={project.title}
+                  className="display-lg mb-4 text-white"
+                  element="h1"
+                  maxLength={100}
+                />
+                <EditableText
+                  sectionId={`project-${projectId}-subtitle`}
+                  defaultContent={project.subtitle}
+                  className="h2 text-cyan-400 mb-6"
+                  element="p"
+                  maxLength={100}
+                />
+                <EditableText
+                  sectionId={`project-${projectId}-description`}
+                  defaultContent={project.description}
+                  className="body-lg max-w-3xl mx-auto text-gray-400"
+                  element="p"
+                  multiline={true}
+                  maxLength={500}
+                />
               </div>
 
               {/* Project Info Cards */}
