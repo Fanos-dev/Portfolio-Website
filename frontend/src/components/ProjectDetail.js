@@ -188,7 +188,24 @@ const ProjectDetail = () => {
       ],
       duration: '72 hours (Game Jam)',
       teamSize: 'Solo developer',
-      role: 'Game Designer, Developer & Audio Designer'
+      role: 'Game Designer, Developer & Audio Designer',
+      gallery: [
+        {
+          type: 'image',
+          title: 'Alien Landscape',
+          description: 'Atmospheric alien world environment'
+        },
+        {
+          type: 'image',
+          title: 'Environmental Details',
+          description: 'Minimalist visual design elements'
+        },
+        {
+          type: 'image',
+          title: 'Exploration View',
+          description: 'First-person exploration perspective'
+        }
+      ]
     },
     'pos-inventory-system': {
       title: 'POS & Inventory Management System',
