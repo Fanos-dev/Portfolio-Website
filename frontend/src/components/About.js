@@ -1,6 +1,7 @@
 import React from 'react';
 import { GraduationCap, Users, Trophy } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import EditableText from './EditableText';
 
 const About = () => {
   const navigate = useNavigate();
