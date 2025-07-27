@@ -2,6 +2,7 @@ import React from 'react';
 import { Github, Linkedin, Mail, ArrowDown } from 'lucide-react';
 import { SiItchdotio } from 'react-icons/si';
 import Typewriter from 'typewriter-effect';
+import EditableText from './EditableText';
 
 const Hero = () => {
   const socialLinks = [
