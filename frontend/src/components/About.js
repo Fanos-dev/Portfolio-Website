@@ -28,37 +28,59 @@ const About = () => {
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="display-md mb-6 text-white">About Me</h2>
-            <p className="body-lg max-w-2xl mx-auto text-gray-400">
-              A passionate Computer Science student with a drive for creating innovative 
-              software solutions and interactive experiences.
-            </p>
+            <EditableText
+              sectionId="about-title"
+              defaultContent="About Me"
+              className="display-md mb-6 text-white"
+              element="h2"
+              maxLength={50}
+            />
+            <EditableText
+              sectionId="about-subtitle"
+              defaultContent="A passionate Computer Science student with a drive for creating innovative software solutions and interactive experiences."
+              className="body-lg max-w-2xl mx-auto text-gray-400"
+              element="p"
+              multiline={true}
+              maxLength={300}
+            />
           </div>
 
           {/* Main Content */}
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             {/* Text Content */}
             <div>
-              <h3 className="h1 mb-6 text-white">
-                Building the Future Through Code
-              </h3>
+              <EditableText
+                sectionId="about-main-title"
+                defaultContent="Building the Future Through Code"
+                className="h1 mb-6 text-white"
+                element="h3"
+                maxLength={100}
+              />
               <div className="space-y-4 text-gray-400">
-                <p className="body-md">
-                  Currently pursuing my BSc in Computer Science & Information Technology 
-                  at the University of KwaZulu-Natal, I'm passionate about leveraging 
-                  technology to solve real-world problems and create engaging digital experiences.
-                </p>
-                <p className="body-md">
-                  My journey in software development has been shaped by collaborative 
-                  projects, leadership roles, and a constant drive to learn new technologies. 
-                  From developing story-driven games to creating complex systems, I thrive 
-                  in environments that challenge me to think creatively and work effectively 
-                  with teams.
-                </p>
-                <p className="body-md">
-                  When I'm not coding, you'll find me exploring the latest in game development, 
-                  participating in hackathons, or mentoring fellow students as a class representative.
-                </p>
+                <EditableText
+                  sectionId="about-paragraph-1"
+                  defaultContent="Currently pursuing my BSc in Computer Science & Information Technology at the University of KwaZulu-Natal, I'm passionate about leveraging technology to solve real-world problems and create engaging digital experiences."
+                  className="body-md"
+                  element="p"
+                  multiline={true}
+                  maxLength={500}
+                />
+                <EditableText
+                  sectionId="about-paragraph-2"
+                  defaultContent="My journey in software development has been shaped by collaborative projects, leadership roles, and a constant drive to learn new technologies. From developing story-driven games to creating complex systems, I thrive in environments that challenge me to think creatively and work effectively with teams."
+                  className="body-md"
+                  element="p"
+                  multiline={true}
+                  maxLength={500}
+                />
+                <EditableText
+                  sectionId="about-paragraph-3"
+                  defaultContent="When I'm not coding, you'll find me exploring the latest in game development, participating in hackathons, or mentoring fellow students as a class representative."
+                  className="body-md"
+                  element="p"
+                  multiline={true}
+                  maxLength={300}
+                />
               </div>
             </div>
 
