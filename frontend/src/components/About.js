@@ -119,8 +119,21 @@ const About = () => {
                   <div className="w-16 h-16 bg-blue-300/20 rounded-full flex items-center justify-center mx-auto mb-6">
                     <IconComponent size={32} className="text-blue-300" />
                   </div>
-                  <h4 className="h3 mb-4 text-white">{highlight.title}</h4>
-                  <p className="body-md text-gray-400">{highlight.description}</p>
+                  <EditableText
+                    sectionId={`about-card-title-${index}`}
+                    defaultContent={highlight.title}
+                    className="h3 mb-4 text-white"
+                    element="h4"
+                    maxLength={50}
+                  />
+                  <EditableText
+                    sectionId={`about-card-description-${index}`}
+                    defaultContent={highlight.description}
+                    className="body-md text-gray-400"
+                    element="p"
+                    multiline={true}
+                    maxLength={200}
+                  />
                   {highlight.isClickable && (
                     <p className="body-sm text-blue-300 mt-2">Click to learn more →</p>
                   )}
