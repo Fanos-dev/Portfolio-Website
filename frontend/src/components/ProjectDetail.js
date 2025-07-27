@@ -37,7 +37,29 @@ const ProjectDetail = () => {
       ],
       duration: '4 months',
       teamSize: 'Team project',
-      role: 'Core Developer & Integration Specialist'
+      role: 'Core Developer & Integration Specialist',
+      gallery: [
+        {
+          type: 'image',
+          title: 'Game Interface',
+          description: 'Main game screen with narrative elements'
+        },
+        {
+          type: 'image',
+          title: 'Character Selection',
+          description: 'Interactive character selection screen'
+        },
+        {
+          type: 'image',
+          title: 'Narrative Scene',
+          description: 'Integrated video and story elements'
+        },
+        {
+          type: 'image',
+          title: 'Quiz Interface',
+          description: 'Dynamic quiz system with multimedia'
+        }
+      ]
     },
     'terrain-generation': {
       title: 'Terrain Generation',
