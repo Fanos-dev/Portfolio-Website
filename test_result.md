@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Update the 'Education and Leadership' card on my portfolio homepage so that when clicked, it opens a new page titled 'Education and Leadership' with detailed education and leadership information."
+user_problem_statement: "In the project details and education pages, add a place for a gallery"
 
 backend:
   - task: "Basic API functionality - GET /api/ endpoint"
