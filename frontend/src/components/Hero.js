@@ -34,8 +34,22 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto">
           {/* Main Title */}
           <h1 className="display-lg mb-8 text-white">
-            Mahomed Irfan 
-            <span className="block text-blue-300 glow-icon">Akbur Ally</span>
+            <EditableText
+              sectionId="hero-name"
+              defaultContent="Mahomed Irfan"
+              className="block"
+              element="span"
+              maxLength={50}
+            />
+            <span className="block text-blue-300 glow-icon">
+              <EditableText
+                sectionId="hero-surname"
+                defaultContent="Akbur Ally"
+                className="block"
+                element="span"
+                maxLength={50}
+              />
+            </span>
           </h1>
 
           {/* Tagline */}
@@ -57,11 +71,14 @@ const Hero = () => {
           </p>
 
           {/* Bio */}
-          <p className="body-lg mb-12 max-w-2xl mx-auto text-gray-400">
-            Passionate about building impactful software and games. Experienced in C++, Java, 
-            and full-stack system development. Excels in collaborative environments and thrives 
-            on solving real-world problems through code.
-          </p>
+          <EditableText
+            sectionId="hero-bio"
+            defaultContent="Passionate about building impactful software and games. Experienced in C++, Java, and full-stack system development. Excels in collaborative environments and thrives on solving real-world problems through code."
+            className="body-lg mb-12 max-w-2xl mx-auto text-gray-400"
+            element="p"
+            multiline={true}
+            maxLength={500}
+          />
 
           {/* Social Links */}
           <div className="flex justify-center space-x-6 mb-12">
