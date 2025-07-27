@@ -84,3 +84,19 @@ code {
     @apply bg-background text-foreground;
     }
 }
+
+.fade-in-orbs > div {
+  animation: fadeInOrb 2s ease-out both;
+}
+
+@keyframes fadeInOrb {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 0.25;
+    transform: scale(1);
+  }
+}
+

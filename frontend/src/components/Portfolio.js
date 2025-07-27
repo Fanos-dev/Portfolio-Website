@@ -6,19 +6,24 @@ import Projects from './Projects';
 import Skills from './Skills';
 import Contact from './Contact';
 import Footer from './Footer';
+import Orbs from './Orbs';
 
 const Portfolio = () => {
   return (
-    <div className="min-h-screen">
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Projects />
-        <Skills />
-        <Contact />
-      </main>
-      <Footer />
+    <div className="relative">
+      {/* Global animated orb */}
+      <Orbs />
+      <div className="min-h-screen">
+        <Header />
+        <main>
+          <Hero />
+          <Projects />
+          <About />
+          <Skills />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 };

@@ -71,18 +71,28 @@ module.exports = {
   					height: '0'
   				}
   			},
-			floatLight: {
-				'0%': { transform: 'translate(0px, 0px)' },
-				'25%': { transform: 'translate(100px, -50px)' },
-				'50%': { transform: 'translate(200px, 100px)' },
-				'75%': { transform: 'translate(-100px, 50px)' },
-				'100%': { transform: 'translate(0px, 0px)' }
-        },
+			float1: {
+				'0%': { transform: 'translate(-50%, -50%) scale(1)' },
+				'50%': { transform: 'translate(-45%, -55%) scale(1.1)' },
+				'100%': { transform: 'translate(-50%, -50%) scale(1)' },
+			},
+			float2: {
+				'0%': { transform: 'translate(0, 0) scale(1)' },
+				'50%': { transform: 'translate(50px, -30px) scale(1.2)' },
+				'100%': { transform: 'translate(0, 0) scale(1)' },
+			},
+			float3: {
+				'0%': { transform: 'translate(0, 0) scale(1)' },
+				'50%': { transform: 'translate(-40px, 50px) scale(1.1)' },
+				'100%': { transform: 'translate(0, 0) scale(1)' },
+			},
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out',
-			'floating-light': 'floatLight 10s ease-in-out infinite'
+			orb1: 'float1 24s ease-in-out infinite',
+    		orb2: 'float2 30s ease-in-out infinite',
+    		orb3: 'float3 26s ease-in-out infinite',
   		}
   	}
   },
