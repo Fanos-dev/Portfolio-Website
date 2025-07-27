@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, ExternalLink, Github, Calendar, Users, Code, Target } from 'lucide-react';
 import Header from './Header';
 import Footer from './Footer';
+import EditableText from './EditableText';
 
 const ProjectDetail = () => {
   const { projectId } = useParams();
