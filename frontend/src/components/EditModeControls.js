@@ -1,16 +1,18 @@
 import React from 'react';
-import { Edit3, Eye, Save, RotateCcw, AlertCircle } from 'lucide-react';
+import { Edit3, Eye, Save, RotateCcw, AlertCircle, LogOut } from 'lucide-react';
 import { useEditMode } from '../contexts/EditModeContext';
 
 const EditModeControls = () => {
   const { 
     isEditMode, 
+    isAuthenticated,
     previewMode, 
     hasUnsavedChanges, 
     toggleEditMode, 
     togglePreviewMode, 
     saveContent, 
-    resetChanges 
+    resetChanges,
+    logout
   } = useEditMode();
 
   const handleSave = () => {
@@ -26,7 +28,17 @@ const EditModeControls = () => {
     }
   };
 
-  if (!isEditMode) {
+  const handleLogout = () => {
+    if (hasUnsavedChanges) {
+      const shouldSave = window.confirm('You have unsaved changes. Would you like to save before logging out?');
+      if (shouldSave) {
+        saveContent();
+      }
+    }
+    logout();
+  };
+
+  if (!isAuthenticated) {
     return (
       <button
         onClick={toggleEditMode}
@@ -35,6 +47,27 @@ const EditModeControls = () => {
       >
         <Edit3 size={20} />
       </button>
+    );
+  }
+
+  if (!isEditMode) {
+    return (
+      <div className="fixed bottom-6 right-6 flex flex-col gap-2 z-50">
+        <button
+          onClick={toggleEditMode}
+          className="bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors group"
+          title="Enable edit mode"
+        >
+          <Edit3 size={20} />
+        </button>
+        <button
+          onClick={handleLogout}
+          className="bg-red-600 text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition-colors group"
+          title="Logout"
+        >
+          <LogOut size={20} />
+        </button>
+      </div>
     );
   }
 
@@ -90,6 +123,14 @@ const EditModeControls = () => {
         >
           <Edit3 size={16} />
           <span>Exit Edit Mode</span>
+        </button>
+
+        <button
+          onClick={handleLogout}
+          className="w-full flex items-center space-x-2 px-3 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors"
+        >
+          <LogOut size={16} />
+          <span>Logout</span>
         </button>
       </div>
       
