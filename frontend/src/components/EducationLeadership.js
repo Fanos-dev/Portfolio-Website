@@ -57,6 +57,39 @@ const EducationLeadership = () => {
     'Mentorship'
   ];
 
+  const galleryData = [
+    {
+      type: 'image',
+      title: 'UKZN Campus',
+      description: 'University of KwaZulu-Natal Westville Campus'
+    },
+    {
+      type: 'image',
+      title: 'Graduation Ceremony',
+      description: 'Academic achievements and awards ceremony'
+    },
+    {
+      type: 'image',
+      title: 'Class Representative',
+      description: 'Leading COMP315 class activities'
+    },
+    {
+      type: 'image',
+      title: 'Leadership Activities',
+      description: 'Student engagement and mentorship'
+    },
+    {
+      type: 'image',
+      title: 'Academic Awards',
+      description: 'Dean\'s Commendations and Merit Certificates'
+    },
+    {
+      type: 'image',
+      title: 'School Leadership',
+      description: 'Head Prefect duties at Phoenix Muslim School'
+    }
+  ];
+
   return (
     <div className="min-h-screen">
       <Header />
