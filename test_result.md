@@ -180,6 +180,9 @@ frontend:
       - working: true
         agent: "main"
         comment: "Created new dedicated page for Education and Leadership with detailed sections for education (UKZN and Phoenix Muslim School) and leadership roles (Class Rep and Head Prefect)."
+      - working: true
+        agent: "main"
+        comment: "Enhanced the page design to match ProjectDetail presentation style with Header/Footer components, hero section, info cards, sidebar layout, and improved styling while keeping the same card content."
 
   - task: "Update About component to combine Education and Leadership cards"
     implemented: true
